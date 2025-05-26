@@ -16,7 +16,9 @@ from pathlib import Path
 ### sólo DEV ###
 from dotenv import load_dotenv
 
-load_dotenv(override=True)
+dotenv_path = os.path.join("../", ".env")
+
+load_dotenv(dotenv_path=dotenv_path, override=True)
 ### /sólo DEV ##
 
 
