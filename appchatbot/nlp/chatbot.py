@@ -78,7 +78,10 @@ def get_related_intents(current_tag, intents_json, max_related=3):
     related = []
 
     for intent in intents_json['intents']:
-        if intent['tag'] != current_tag:
+        if intent['tag'] != current_tag and \
+           intent['tag'] != "saludo" and \
+           intent['tag'] != "agradecimiento" and \
+           intent['tag'] != "desconocido":
             related.append({
                 "tag": intent['tag'],
                 "patterns": intent['patterns'][:2]
