@@ -135,7 +135,7 @@
             ]
         },
         {
-            "tag": "funciones_resumen",
+            "tag": "funciones_moodle_resumen",
             "patterns": [
                 "¿Cuáles son las funciones principales de Moodle?",
                 "Resumime para qué sirve Moodle",
@@ -148,7 +148,7 @@
             ]
         },
         {
-            "tag": "funciones_rol",
+            "tag": "funciones_moodle_rol",
             "patterns": [
                 "¿Cómo se categorizan las funciones según el rol?",
                 "¿Qué acciones se pueden realizar según el rol?",
@@ -162,6 +162,7 @@
         {
             "tag": "crear_aula_individual",
             "patterns": [
+                "¿Cómo agregar un aula?",
                 "¿Cómo creo un aula en Moodle?",
                 "Pasos para crear un curso individual en Moodle",
                 "¿Qué permisos necesito para crear un aula?",
@@ -176,6 +177,7 @@
         {
             "tag": "crear_aula_csv",
             "patterns": [
+                "¿Cómo agregar un aula por CSV?",
                 "¿Cómo puedo crear varias aulas a la vez?",
                 "Crear aulas en forma masiva",
                 "¿Qué es un archivo CSV en Moodle?",
@@ -200,7 +202,7 @@
             ]
         },
         {
-            "tag": "copia_seguridad_restauracion",
+            "tag": "copia_seguridad_restauracion_curso",
             "patterns": [
                 "¿Cómo hago una copia de seguridad de un curso?",
                 "Restaurar un curso desde archivo .mbz",
@@ -222,12 +224,13 @@
                 "¿Qué significa actividad en Moodle?"
             ],
             "responses": [
-                "Un *recurso* en Moodle es un contenido que el docente publica para que los estudiantes lo consulten o visualicen. No genera una acción interactiva ni se califica. En cambio, una *actividad* es un elemento que requiere una acción del estudiante, como responder, subir archivos o participar. Moodle registra esa acción y puede calificarla. Ambas se agregan desde el botón “Añadir una actividad o recurso” en el modo de edición."
+                "Un recurso en Moodle es un contenido que el docente publica para que los estudiantes lo consulten o visualicen. No genera una acción interactiva ni se califica. En cambio, una *actividad* es un elemento que requiere una acción del estudiante, como responder, subir archivos o participar. Moodle registra esa acción y puede calificarla. Ambas se agregan desde el botón “Añadir una actividad o recurso” en el modo de edición."
             ]
         },
         {
-            "tag": "como_agregar_recursos_actividades",
+            "tag": "como_crear_agregar_recurso_actividad",
             "patterns": [
+                "¿Cómo crear una actividad?",
                 "¿Cómo agrego una actividad en Moodle?",
                 "¿Cómo se añaden recursos?",
                 "Agregar recurso o actividad",
@@ -236,6 +239,31 @@
             ],
             "responses": [
                 "Para agregar recursos o actividades en Moodle, primero activá el modo de edición. Luego, dentro de la sección deseada del curso, hacé clic en “Añadir una actividad o recurso”. Moodle te mostrará un selector donde cada ítem tiene su ícono, una breve descripción y un enlace a ayuda ampliada."
+            ]
+        },
+        {
+            "tag": "tipos_actividad",
+            "patterns": [
+                "¿Qué tipos de actividades hay en Moodle?",
+                "¿Qué actividades puedo crear?",
+                "Opciones de actividades en Moodle"
+            ],
+            "responses": [
+                "Puedes crear tareas, cuestionarios, foros, wikis, SCORM, encuestas, entre otras.",
+                "Moodle permite varios tipos de actividades como tarea, cuestionario, foro, glosario, entre otros."
+            ]
+        },
+                {
+            "tag": "modificar_editar_actividad",
+            "patterns": [
+                "¿Cómo edito una actividad?",
+                "Modificar una tarea ya creada",
+                "Cambiar la configuración de una actividad",
+                "Editar actividad en Moodle"
+            ],
+            "responses": [
+                "Activa la edición, haz clic en 'Editar' junto a la actividad y selecciona 'Editar ajustes'.",
+                "Para editar una actividad, primero activa edición y luego haz clic en el ícono de engranaje o en el menú 'Editar'."
             ]
         },
         {
@@ -248,10 +276,7 @@
                 "¿Cómo uso el recurso Archivo en el aula?"
             ],
             "responses": [
-                "El recurso *Archivo* permite subir un único archivo que los estudiantes pueden descargar o visualizar en línea. Puede ser un PDF, documento Word, presentación, imagen, audio o planilla. Es ideal para compartir materiales estables como documentos oficiales, textos guía, ejemplos o casos.",
-                "**Diseño instruccional:** Ubicalo dentro de una secuencia didáctica clara, con una descripción orientadora visible. Evitá nombres genéricos como 'documento1.pdf'.",
-                "**Enfoque tecnopedagógico:** Asegurate de que el archivo sea accesible desde distintos dispositivos y no sea demasiado pesado. Si Moodle tiene un visibilizador habilitado, usalo para que puedan leer sin descargar.",
-                "**Ejemplo aplicado:** Archivo: 'Normativa de Higiene y Seguridad en el Trabajo.pdf'. Se usa como lectura previa antes de una tarea crítica + cuestionario. Se indica: 'Subrayá los artículos que ya se aplican en tu experiencia cotidiana'."
+                "El recurso Archivo permite subir un único archivo que los estudiantes pueden descargar o visualizar en línea. Puede ser un PDF, documento Word, presentación, imagen, audio o planilla. Es ideal para compartir materiales estables como documentos oficiales, textos guía, ejemplos o casos.\n • Diseño instruccional: Ubicalo dentro de una secuencia didáctica clara, con una descripción orientadora visible. Evitá nombres genéricos como 'documento1.pdf'.\n • Enfoque tecnopedagógico: Asegurate de que el archivo sea accesible desde distintos dispositivos y no sea demasiado pesado. Si Moodle tiene un visibilizador habilitado, usalo para que puedan leer sin descargar.\n • Ejemplo aplicado: Archivo: 'Normativa de Higiene y Seguridad en el Trabajo.pdf'. Se usa como lectura previa antes de una tarea crítica + cuestionario. Se indica: 'Subrayá los artículos que ya se aplican en tu experiencia cotidiana'."
             ]
         },
         {
@@ -264,10 +289,7 @@
                 "¿Cómo agrupar materiales en Moodle?"
             ],
             "responses": [
-                "El recurso *Carpeta* permite agrupar varios archivos en un solo recurso. Se pueden mostrar como una lista expandida o como una carpeta comprimida para descargar. Es útil para compartir bibliografía, módulos temáticos, imágenes, guías o audios.",
-                "**Diseño instruccional:** Usá carpetas para evitar saturar el aula con muchos archivos sueltos. Ordená los contenidos según el recorrido del curso.",
-                "**Pertinencia pedagógica:** Fomenta el acceso autónomo, la exploración y la comparación de materiales. Es ideal cuando el estudiante puede elegir qué contenidos priorizar.",
-                "**Ejemplo:** Carpeta con guías por unidad que se muestran como lista expandida dentro del tema 'Material de consulta'."
+                "El recurso Carpeta permite agrupar varios archivos en un solo recurso. Se pueden mostrar como una lista expandida o como una carpeta comprimida para descargar. Es útil para compartir bibliografía, módulos temáticos, imágenes, guías o audios.\n• Diseño instruccional: Usá carpetas para evitar saturar el aula con muchos archivos sueltos. Ordená los contenidos según el recorrido del curso.\n• Pertinencia pedagógica: Fomenta el acceso autónomo, la exploración y la comparación de materiales. Es ideal cuando el estudiante puede elegir qué contenidos priorizar.\n• Ejemplo: Carpeta con guías por unidad que se muestran como lista expandida dentro del tema 'Material de consulta'."
             ]
         },
         {
@@ -331,7 +353,7 @@
             ]
         },
         {
-            "tag": "beneficios_pedagogicos_del_libro",
+            "tag": "beneficios_pedagogicos_libro",
             "patterns": [
                 "¿Qué ventajas tiene usar el recurso Libro?",
                 "¿Por qué usar un libro en lugar de subir PDFs sueltos?",
@@ -355,7 +377,7 @@
             ]
         },
         {
-            "tag": "actividad_tarea_moodle",
+            "tag": "actividad_tarea",
             "patterns": [
                 "¿Qué es la actividad Tarea en Moodle?",
                 "¿Para qué sirve la actividad Tarea?",
@@ -417,7 +439,7 @@
             ]
         },
         {
-            "tag": "actividad_cuestionario_moodle",
+            "tag": "actividad_cuestionario",
             "patterns": [
                 "¿Qué es la actividad Cuestionario en Moodle?",
                 "¿Para qué sirve el cuestionario?",
@@ -720,7 +742,7 @@
             ]
         },
         {
-            "tag": "pertinencia_pedagogica",
+            "tag": "pertinencia_pedagogica_leccion",
             "patterns": [
                 "¿Qué valor pedagógico tiene la lección?",
                 "¿Cuál es la pertinencia pedagógica de la lección?",
@@ -732,7 +754,7 @@
             ]
         },
         {
-            "tag": "diseno_instruccional",
+            "tag": "diseno_instruccional_leccion",
             "patterns": [
                 "¿Cómo se diseña una lección?",
                 "¿Qué tener en cuenta al crear una lección?",
@@ -744,7 +766,7 @@
             ]
         },
         {
-            "tag": "configuracion_tecnica",
+            "tag": "configuracion_tecnica_leccion",
             "patterns": [
                 "¿Qué configuraciones técnicas tiene la lección?",
                 "¿Qué opciones técnicas permite la lección?",
@@ -756,7 +778,7 @@
             ]
         },
         {
-            "tag": "ejemplo_aplicado",
+            "tag": "ejemplo_aplicado_leccion",
             "patterns": [
                 "¿Hay un ejemplo de lección aplicada?",
                 "¿Cómo se aplica la lección en un contexto real?",
@@ -768,7 +790,7 @@
             ]
         },
         {
-            "tag": "buenas_practicas",
+            "tag": "buenas_practicas_leccion",
             "patterns": [
                 "¿Qué buenas prácticas recomiendan para usar la lección?",
                 "¿Cómo mejorar el uso de la lección?",
@@ -944,32 +966,7 @@
             ]
         },
         {
-            "tag": "crear_actividad",
-            "patterns": [
-                "¿Cómo creo una actividad en Moodle?",
-                "Quiero añadir una actividad al curso",
-                "¿Dónde se agregan las actividades?",
-                "Crear tarea en Moodle"
-            ],
-            "responses": [
-                "Para crear una actividad, activa edición, haz clic en 'Añadir una actividad o recurso' y selecciona el tipo de actividad que deseas agregar.",
-                "Debes ir al curso, activar edición y luego hacer clic en 'Agregar una actividad o recurso'."
-            ]
-        },
-        {
-            "tag": "tipos_actividad",
-            "patterns": [
-                "¿Qué tipos de actividades hay en Moodle?",
-                "¿Qué actividades puedo crear?",
-                "Opciones de actividades en Moodle"
-            ],
-            "responses": [
-                "Puedes crear tareas, cuestionarios, foros, wikis, SCORM, encuestas, entre otras.",
-                "Moodle permite varios tipos de actividades como tarea, cuestionario, foro, glosario, entre otros."
-            ]
-        },
-        {
-            "tag": "cargar_notas",
+            "tag": "cargar_notas_calificaciones",
             "patterns": [
                 "¿Cómo cargo las calificaciones?",
                 "Subir notas al sistema",
@@ -979,19 +976,6 @@
             "responses": [
                 "Ve al libro de calificaciones, selecciona 'Importar', elige el formato y carga el archivo.",
                 "Las calificaciones se pueden cargar desde el libro de calificaciones o directamente en cada actividad."
-            ]
-        },
-        {
-            "tag": "editar_actividad",
-            "patterns": [
-                "¿Cómo edito una actividad?",
-                "Modificar una tarea ya creada",
-                "Cambiar la configuración de una actividad",
-                "Editar actividad en Moodle"
-            ],
-            "responses": [
-                "Activa la edición, haz clic en 'Editar' junto a la actividad y selecciona 'Editar ajustes'.",
-                "Para editar una actividad, primero activa edición y luego haz clic en el ícono de engranaje o en el menú 'Editar'."
             ]
         },
         {
