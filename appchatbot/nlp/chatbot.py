@@ -49,23 +49,41 @@ def predict_class(sentence):
         
     return return_list
 
-def get_response(intents_list, intents_json):
+def get_response_with_related_intents(intents_list, intents_json):
     if not intents_list:
-        return "Lo siento, no entendí tu mensaje."
-    
+        return {
+            "response": "Lo siento, no entendí tu mensaje.",
+            "related_intents": []
+        }
+
     tag = intents_list[0]['intent']
     list_of_intents = intents_json['intents']
-    
-    for i in list_of_intents:
-        if i['tag'] == tag:
-            result = random.choice(i['responses'])
-            break
-        
-    return result
 
-def chatbot_response(msg):
-    intents_list = predict_class(msg)
-    if intents_list:
-        return get_response(intents_list, intents)
-    else:
-        return "Lo siento, no entendí tu mensaje."
+    for intent in list_of_intents:
+        if intent['tag'] == tag:
+            response = random.choice(intent['responses'])
+            related_intents = get_related_intents(tag, intents_json)
+            return {
+                "response": response,
+                "related_intents": related_intents
+            }
+
+    return {
+        "response": "Lo siento, no entendí tu mensaje.",
+        "related_intents": []
+    }
+
+
+def get_related_intents(current_tag, intents_json, max_related=3):
+    related = []
+
+    for intent in intents_json['intents']:
+        if intent['tag'] != current_tag:
+            related.append({
+                "tag": intent['tag'],
+                "patterns": intent['patterns'][:2]
+            })
+
+    # Barajamos y seleccionamos algunos relacionados
+    random.shuffle(related)
+    return related[:max_related]
