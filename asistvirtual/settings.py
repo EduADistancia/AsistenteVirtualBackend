@@ -17,7 +17,6 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 dotenv_path = os.path.join("../", ".env")
-
 load_dotenv(dotenv_path=dotenv_path, override=True)
 ### /sólo DEV ##
 
@@ -35,8 +34,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
 
 # Application definition
 
@@ -51,6 +49,8 @@ INSTALLED_APPS = [
     'corsheaders',
     # propias
     'appchatbot.apps.AppchatbotConfig',
+    'appusuarios.apps.AppusuariosConfig',
+    'appcomentarios.apps.AppcomentariosConfig'
 ]
 
 MIDDLEWARE = [
@@ -139,3 +139,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS
 CORS_ALLOWED_ORIGINS = os.getenv("CORS_ALLOWED_ORIGINS").split()
+
+# Modelo de autenticación customizado
+AUTH_USER_MODEL = 'appusuarios.User'
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/admin/login/'
+
+# Google reCaptcha
+RECAPTCHA_SECRET_KEY = os.getenv("RECAPTCHA_SECRET_KEY")
