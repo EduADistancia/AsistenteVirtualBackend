@@ -39,6 +39,9 @@ ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
 # Application definition
 
 INSTALLED_APPS = [
+     # admin-interface
+    "admin_interface",
+    "colorfield",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -47,6 +50,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # de 3ros
     'corsheaders',
+    'rest_framework',
+    'rest_framework.authtoken',
     # propias
     'appchatbot.apps.AppchatbotConfig',
     'appusuarios.apps.AppusuariosConfig',
@@ -54,6 +59,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
@@ -146,5 +152,17 @@ AUTH_USER_MODEL = 'appusuarios.User'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/admin/login/'
 
-# Google reCaptcha
-RECAPTCHA_SECRET_KEY = os.getenv("RECAPTCHA_SECRET_KEY")
+# Admin-interface
+X_FRAME_OPTIONS = "SAMEORIGIN"
+SILENCED_SYSTEM_CHECKS = ["security.W019"]
+
+# DRF
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    )
+}

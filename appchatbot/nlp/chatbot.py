@@ -49,6 +49,23 @@ def predict_class(sentence):
         
     return return_list
 
+def get_related_intents_by_similarity(current_tag, current_patterns, intents_json, max_related=3):
+    current_words = set(" ".join(current_patterns).lower().split())
+    scores = []
+
+    for intent in intents_json["intents"]:
+        if intent["tag"] == current_tag:
+            continue  # saltamos el actual
+
+        intent_words = set(" ".join(intent["patterns"]).lower().split())
+        score = len(current_words & intent_words) / len(current_words | intent_words)  # Jaccard
+        scores.append((score, intent["tag"], intent["patterns"][:2]))
+
+    # Ordenamos por similitud y devolvemos los más parecidos
+    scores.sort(reverse=True)
+    related = [{"tag": tag, "patterns": patterns} for score, tag, patterns in scores[:max_related]]
+    return related
+
 def get_response_with_related_intents(intents_list, intents_json):
     if not intents_list:
         return {
@@ -62,7 +79,9 @@ def get_response_with_related_intents(intents_list, intents_json):
     for intent in list_of_intents:
         if intent['tag'] == tag:
             response = random.choice(intent['responses'])
-            related_intents = get_related_intents(tag, intents_json)
+            related_intents = get_related_intents_by_similarity(
+                tag, intent['patterns'], intents_json
+            )
             return {
                 "response": response,
                 "related_intents": related_intents
@@ -72,7 +91,6 @@ def get_response_with_related_intents(intents_list, intents_json):
         "response": "Lo siento, no entendí tu mensaje.",
         "related_intents": []
     }
-
 
 def get_related_intents(current_tag, intents_json, max_related=3):
     related = []

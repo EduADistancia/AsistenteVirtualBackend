@@ -10,3 +10,6 @@ class Comment(models.Model):
     class Meta:
         verbose_name = "Comentario"
         verbose_name_plural = "Comentarios"
+        
+    def __str__(self):
+        return "Comentario"
