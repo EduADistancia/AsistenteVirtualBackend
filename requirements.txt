@@ -25,6 +25,7 @@ markdown-it-py==3.0.0
 MarkupSafe==3.0.2
 mdurl==0.1.2
 ml_dtypes==0.5.1
+mysqlclient==2.2.7
 namex==0.0.9
 nltk==3.9.1
 numpy==2.1.3
