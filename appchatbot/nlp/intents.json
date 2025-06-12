@@ -42,8 +42,7 @@
                 "¿Moodle es un aula virtual?"
             ],
             "responses": [
-                "Moodle es una plataforma digital institucional de enseñanza-aprendizaje que permite gestionar cursos, actividades y usuarios.",
-                "Es un entorno virtual de aprendizaje que se usa para enseñar, aprender y gestionar información académica en línea."
+                "Moodle es una plataforma digital (o sistema en línea) diseñada para acompañar procesos de enseñanza y aprendizaje a través de internet.\nEs un sistema de código abierto, lo que significa que puede ser adaptado y gestionado por instituciones educativas según sus necesidades."
             ]
         },
         {
@@ -117,12 +116,14 @@
             ],
             "responses": [
                 "Moodle se organiza en niveles: Sitio, Categoría, Curso, Tema o sección, y Actividad o recurso.",
-                "Cada curso está compuesto por temas o secciones con diferentes tipos de recursos como tareas, foros o materiales de lectura."
+                "Moodle funciona como un sitio web privado, al que solo ingresan quienes tienen usuario y contraseña.",
+                "Estructura general:\n\nNivel: ¿Qué es? | Ejemplo\n• Sitio Moodle: Toda la plataforma (de una escuela, institución) | moodle.escuelatecnica.edu.ar\n• Categoría: Área de cursos o nivel educativo | Formación Profesional / 5to Año / Capacitación Docente\n• Curso: Aula virtual específica | Introducción al Trabajo / Curso X\n• Tema o sección: Unidad de contenido dentro del curso | Unidad 1 - Derechos laborales / Tema 2 - Evaluación\n• Actividad o recurso: Elemento específico | Tarea: investigación / Foro: presentación / PDF de lectura"
             ]
         },
         {
             "tag": "datos_academicos",
             "patterns": [
+                "¿Qué datos académicos gestiona Moodle?",
                 "¿Qué datos se pueden ver en Moodle?",
                 "¿Qué seguimiento puedo hacer a los estudiantes?",
                 "¿Qué informes puedo ver como docente?",
@@ -131,7 +132,8 @@
             ],
             "responses": [
                 "Moodle permite acceder a datos como accesos, materiales vistos, tareas entregadas, calificaciones y participación en foros.",
-                "Sí, Moodle guarda información detallada para hacer un seguimiento pedagógico y tomar decisiones educativas informadas."
+                "Sí, Moodle guarda información detallada para hacer un seguimiento pedagógico y tomar decisiones educativas informadas.",
+                "Moodle permite a la institución y a los docentes recopilar, organizar y analizar datos educativos, como:\n\n• Fecha y hora de acceso de cada estudiante.\n• Qué materiales visualizó, cuántas veces.\n• Qué tareas entregó y cuáles no.\n• Calificaciones por actividad.\n• Participación en foros o mensajes.\n• Informes de progreso (por curso, por estudiante, por grupo).\nEsto permite una mejor toma de decisiones pedagógicas, más seguimiento individualizado y más equidad."
             ]
         },
         {
@@ -215,7 +217,7 @@
             ]
         },
         {
-            "tag": "diferencia_recurso_actividad",
+            "tag": "recurso_actividad",
             "patterns": [
                 "¿Cuál es la diferencia entre recurso y actividad en Moodle?",
                 "¿Qué es un recurso y qué es una actividad?",
@@ -228,7 +230,7 @@
             ]
         },
         {
-            "tag": "como_crear_agregar_recurso_actividad",
+            "tag": "agregar_recurso_actividad",
             "patterns": [
                 "¿Cómo crear una actividad?",
                 "¿Cómo agrego una actividad en Moodle?",
@@ -254,7 +256,7 @@
             ]
         },
                 {
-            "tag": "modificar_editar_actividad",
+            "tag": "editar_actividad",
             "patterns": [
                 "¿Cómo edito una actividad?",
                 "Modificar una tarea ya creada",
@@ -293,7 +295,51 @@
             ]
         },
         {
-            "tag": "usar_url_para_enlazar_recursos_externos",
+            "tag": "recurso_pagina",
+            "patterns": [
+                "¿Qué es el recurso página?",
+                "¿Qué es una página?",
+                "¿Para qué sirve página?"
+            ],
+            "responses": [
+                "Crea un recurso de contenido dentro de Moodle que se visualiza como una página web simple. El contenido se edita directamente usando el editor HTML integrado, y puede incluir texto, imágenes, videos, enlaces, tablas, íconos, entre otros elementos.\n\n• Para crear contenidos propios del docente, sin necesidad de subir archivos.\n• Para presentar clases, apuntes, orientaciones o instrucciones con formato enriquecido y diseño visual.\n• Para ofrecer materiales que el estudiante puede consultar sin descargar nada."
+            ]
+        },
+        {
+            "tag": "recurso_pagina_pertinencia_pedagogica",
+            "patterns": [
+                "Beneficios pedagógicos de la página",
+                "¿Cuáles son los beneficios pedagógicos de la página?",
+                "¿Por qué es conveniente usar una página?"
+            ],
+            "responses": [
+                "La Página funciona como un “espacio didáctico independiente”, donde el docente puede:\n\n• Articular información teórica y práctica en un mismo entorno.\n• Organizar los saberes de forma jerarquizada y progresiva.\n• Incorporar instrucciones claras, recursos visuales y vínculos de interés.\n\nEs ideal cuando se busca un enfoque multimodal, es decir, que combine texto, imagen, video y enlace, favoreciendo la comprensión para estudiantes con distintos estilos de aprendizaje."
+            ]
+        },
+        {
+            "tag": "recurso_pagina_diseño_instruccional",
+            "patterns": [
+                "¿Cómo diseño una página?",
+                "Características de una página",
+                "Estilo en una página"
+            ],
+            "responses": [
+                "• Pensar la Página como una unidad mínima de clase o subclase.\n• Usar títulos, subtítulos y listas para facilitar la lectura en pantalla.\n• Incorporar preguntas guía o actividades de lectura activa.\n• Emplear el color, los íconos o el espaciado como elementos de apoyo visual, pero sin sobrecargar.\n\nVentaja adicional: Al estar dentro de Moodle, el contenido de la Página es más accesible para estudiantes con conectividad limitada que si se tratara de archivos adjuntos."
+            ]
+        },
+        {
+            "tag": "recurso_pagina_enfoque_tecnopedagogico",
+            "patterns": [
+                "Ventajas del recurso página",
+                "¿Cuáles son las ventajas del recurso página?",
+                "Beneficios del recurso página"
+            ],
+            "responses": [
+                "• Evita la dependencia de software externo (como Word o PDF).\n• Se adapta mejor a celulares y tablets.\n• Permite editar rápidamente los contenidos sin volver a subir archivos.\n• Puede contener videos embebidos desde YouTube, Drive o Vimeo, sin aumentar el peso del curso."
+            ]
+        },
+        {
+            "tag": "recurso_url",
             "patterns": [
                 "¿Cómo puedo incluir enlaces a páginas externas en mi curso Moodle?",
                 "Quiero agregar un video de YouTube o un documento de Google Drive al aula.",
@@ -305,7 +351,7 @@
             ]
         },
         {
-            "tag": "beneficios_pedagogicos_de_usar_url",
+            "tag": "recurso_url_beneficios_pedagogicos",
             "patterns": [
                 "¿Para qué sirve el recurso URL en Moodle?",
                 "¿Qué ventajas tiene usar links en vez de subir archivos?",
@@ -317,7 +363,7 @@
             ]
         },
         {
-            "tag": "usar_url_con_significado_didactico",
+            "tag": "recurso_url_significado_didactico",
             "patterns": [
                 "¿Cómo hago para que los enlaces tengan sentido pedagógico?",
                 "¿Está bien poner \"hacé clic aquí\"?",
@@ -329,7 +375,7 @@
             ]
         },
         {
-            "tag": "usar_url_de_forma_tecnopedagogica",
+            "tag": "recurso_url_forma_tecnopedagogica",
             "patterns": [
                 "¿Cómo saber si el recurso URL funciona bien en celulares?",
                 "¿Puedo ver si los estudiantes hicieron clic en el link?",
@@ -341,7 +387,7 @@
             ]
         },
         {
-            "tag": "usar_libro_para_organizar_contenidos",
+            "tag": "recurso_libro",
             "patterns": [
                 "¿Cómo puedo organizar un contenido largo en Moodle?",
                 "Quiero crear un manual con capítulos.",
@@ -353,11 +399,11 @@
             ]
         },
         {
-            "tag": "beneficios_pedagogicos_libro",
+            "tag": "recurso_libro_beneficios_pedagogicos",
             "patterns": [
                 "¿Qué ventajas tiene usar el recurso Libro?",
                 "¿Por qué usar un libro en lugar de subir PDFs sueltos?",
-                "¿Sirve para el aprendizaje autónomo?",
+                "¿Sirve para el aprendizaje autónomo el recurso libro?",
                 "¿Se pueden incluir actividades dentro del libro?"
             ],
             "responses": [
@@ -365,15 +411,70 @@
             ]
         },
         {
-            "tag": "disenar_un_libro_didactico",
+            "tag": "recurso_libro_diseño",
             "patterns": [
                 "¿Cómo diseño un libro dentro de Moodle?",
-                "¿Qué estructura debería tener?",
-                "¿Cómo organizo los capítulos?",
-                "¿Qué tipo de contenido puedo incluir?"
+                "¿Qué estructura debería tener un libro?",
+                "¿Cómo organizo los capítulos de un libro?",
+                "¿Qué tipo de contenido puedo incluir en un libro?"
             ],
             "responses": [
                 "Te recomendamos diseñar el libro con una estructura pedagógica clara: introducción, desarrollo y cierre. Podés dividirlo por unidades o funciones (como Teoría / Caso práctico / Actividad sugerida). Es útil usar títulos claros, imágenes, videos y consignas. El recurso Libro permite construir un recorrido temático sólido y visualmente atractivo, ideal para el estudio autónomo."
+            ]
+        },
+        {
+            "tag": "recurso_etiqueta",
+            "patterns": [
+                "¿Que es el recurso Etiqueta?",
+                "¿Para qué sirve el recurso Etiqueta?",
+                "¿Qué hace el recurso Etiqueta?"
+            ],
+            "responses": [
+                "El recurso Etiqueta permite insertar pequeños bloques de contenido directamente en la portada del curso, sin necesidad de abrir una página aparte. Puede contener texto breve, íconos, emojis, imágenes, enlaces, separadores o elementos visuales diseñados con el editor HTML de Moodle. Se utiliza para:\n\n• Para organizar visualmente el curso.\n• Para introducir secciones, bloques o temas.\n• Para dar instrucciones breves antes de una actividad o grupo de recursos.\n• Para marcar un cambio de unidad, de modalidad o de etapa dentro del curso.\nAunque técnicamente no es un contenido en sí, es clave para la navegación y la experiencia de usuario, especialmente en cursos largos o con muchas actividades."
+            ]
+        },
+        {
+            "tag": "recurso_etiqueta_pertinencia_pedagogica",
+            "patterns": [
+                "Fundamento pedagógico de la etiqueta",
+                "¿Por qué utilizar etiquetas?",
+                "Beneficios de la etiqueta"
+            ],
+            "responses": [
+                "La etiqueta es una herramienta didáctica de orientación y señalización. Su buen uso mejora la comprensibilidad, accesibilidad y estética del aula virtual.\nDesde el punto de vista pedagógico, permite:\n\n• Ayudar a los estudiantes a identificar rápidamente qué se espera de ellos.\n• Disminuir la carga cognitiva y el desorden visual.\n• Crear “ambientes virtuales” acogedores, con sentido organizativo y pedagógico claro.\n\nUna etiqueta bien diseñada puede reemplazar la necesidad de instrucciones repetitivas dentro de cada recurso o actividad."
+            ]
+        },
+        {
+            "tag": "recurso_etiqueta_diseño_instruccional",
+            "patterns": [
+                "Recomendaciones para crear etiquetas",
+                "¿Cómo crear etiquetas?",
+                "Diseño en etiquetas"
+            ],
+            "responses": [
+                "Emplear etiquetas al inicio de cada unidad, semana o bloque de contenidos con un título claro (ej.: “ UNIDAD 1 - Introducción”).\nIncluir pequeñas orientaciones de uso, por ejemplo: “Leé el texto y luego participá del foro de reflexión”.\nUsar tipografía clara, íconos o emojis moderados, y evitar sobrecargar con colores o imágenes grandes.\nEvitar que las etiquetas se conviertan en contenido extenso: para eso es mejor usar una Página.\nEn cursos con estudiantes con escasa alfabetización digital, las etiquetas son esenciales para guiar los primeros pasos."
+            ]
+        },
+        {
+            "tag": "recurso_etiqueta_enfoque_tecnopedagogico",
+            "patterns": [
+                "¿Son reutilizables las etiquetas?",
+                "¿Qué requerimientos necesita una etiqueta?",
+                "Etiqueta enfoque tecnopegagócio"
+            ],
+            "responses": [
+                "Son recursos muy livianos y de rápida carga, ideales para cursos accesibles desde celulares.\nFavorecen la navegación autónoma.\nSon completamente editables y reutilizables.\nNo deben confundirse con recursos de contenido (no tienen seguimiento ni evaluación)."
+            ]
+        },
+        {
+            "tag": "recurso_etiqueta_buenas_practicas",
+            "patterns": [
+                "Maneras de utilizar etiquetas",
+                "¿Cómo utilizar las etiquetas?",
+                "Buenas prácticas en etiquetas"
+            ],
+            "responses": [
+                "Buenas prácticas para usar etiquetas:\n\n• Títulos claros y numerados: mejoran la orientación.\n• Breves indicaciones de acción: fomentan autonomía.\n• Íconos visuales coherentes: refuerzan memoria visual.\n• Usar etiquetas para dividir temas: facilita navegación y evita confusión."
             ]
         },
         {
@@ -390,7 +491,7 @@
             ]
         },
         {
-            "tag": "beneficios_pedagogicos_tarea",
+            "tag": "actividad_tarea_beneficios_pedagogicos",
             "patterns": [
                 "¿Cuál es la importancia pedagógica de la Tarea?",
                 "¿Por qué usar la actividad Tarea en un curso?",
@@ -402,7 +503,7 @@
             ]
         },
         {
-            "tag": "configuracion_tecnica_tarea",
+            "tag": "actividad_tarea_configuracion_tecnica",
             "patterns": [
                 "¿Cómo configurar una tarea en Moodle?",
                 "¿Qué opciones técnicas tiene la actividad Tarea?",
@@ -415,7 +516,7 @@
             ]
         },
         {
-            "tag": "ejemplo_tarea_fp_seguridad",
+            "tag": "actividad_tarea_ejemplo",
             "patterns": [
                 "¿Podés dar un ejemplo de tarea para FP?",
                 "¿Cómo sería una tarea sobre riesgos laborales?",
@@ -427,7 +528,7 @@
             ]
         },
         {
-            "tag": "buenas_practicas_tarea",
+            "tag": "actividad_tarea_buenas_practicas",
             "patterns": [
                 "¿Cuáles son las buenas prácticas para usar la tarea?",
                 "¿Qué recomendaciones hay para configurar tareas?",
@@ -451,7 +552,7 @@
             ]
         },
         {
-            "tag": "tipos_preguntas_cuestionario",
+            "tag": "actividad_cuestionario_tipos_preguntas",
             "patterns": [
                 "¿Qué tipos de preguntas hay en los cuestionarios?",
                 "¿Qué significa opción múltiple?",
@@ -463,7 +564,7 @@
             ]
         },
         {
-            "tag": "beneficios_pedagogicos_cuestionario",
+            "tag": "actividad_cuestionario_beneficios_pedagogicos",
             "patterns": [
                 "¿Por qué usar cuestionarios en Moodle?",
                 "¿Qué ventajas pedagógicas tienen los cuestionarios?",
@@ -475,7 +576,7 @@
             ]
         },
         {
-            "tag": "configuracion_tecnica_cuestionario",
+            "tag": "actividad_cuestionario_configuracion_tecnica",
             "patterns": [
                 "¿Cómo configurar un cuestionario en Moodle?",
                 "¿Qué opciones técnicas hay para cuestionarios?",
@@ -487,7 +588,7 @@
             ]
         },
         {
-            "tag": "ejemplo_cuestionario_fp_empleabilidad",
+            "tag": "actividad_cuestionario_ejemplo",
             "patterns": [
                 "Ejemplo de cuestionario para formación profesional",
                 "¿Cómo armar un cuestionario sobre derechos laborales?",
@@ -499,7 +600,7 @@
             ]
         },
         {
-            "tag": "buenas_practicas_cuestionario",
+            "tag": "actividad_cuestionario_buenas_practicas",
             "patterns": [
                 "¿Cuáles son buenas prácticas para cuestionarios?",
                 "¿Cómo mejorar un cuestionario en Moodle?",
@@ -527,7 +628,7 @@
             ]
         },
         {
-            "tag": "tipos_de_foro",
+            "tag": "actividad_foro_general_tipos",
             "patterns": [
                 "¿Cuáles son los tipos de foro en Moodle?",
                 "Foro estándar, foro simple, foro pregunta y respuesta",
@@ -540,7 +641,7 @@
             ]
         },
         {
-            "tag": "configuracion_foro",
+            "tag": "actividad_foro_general_configuracion",
             "patterns": [
                 "¿Cómo configurar un foro en Moodle?",
                 "Opciones técnicas para foros",
@@ -553,7 +654,7 @@
             ]
         },
         {
-            "tag": "foro_pregunta_respuesta",
+            "tag": "actividad_foro_pregunta_respuesta",
             "patterns": [
                 "¿Qué es el foro pregunta y respuesta?",
                 "Foro pregunta y respuesta en Moodle",
@@ -566,7 +667,7 @@
             ]
         },
         {
-            "tag": "uso_pedagogico_foro",
+            "tag": "actividad_foro_general_uso_pedagogico",
             "patterns": [
                 "¿Para qué sirve el foro en Moodle?",
                 "Importancia pedagógica del foro",
@@ -579,7 +680,7 @@
             ]
         },
         {
-            "tag": "diseño_instruccional_foro",
+            "tag": "actividad_foro_general_diseño_instruccional",
             "patterns": [
                 "¿Cómo diseñar un foro en Moodle?",
                 "Consejos para crear un foro efectivo",
@@ -605,7 +706,7 @@
             ]
         },
         {
-            "tag": "configuracion_glosario",
+            "tag": "actividad_glosario_configuracion",
             "patterns": [
                 "¿Cómo configurar un glosario en Moodle?",
                 "Opciones del glosario en Moodle",
@@ -618,7 +719,7 @@
             ]
         },
         {
-            "tag": "uso_pedagogico_glosario",
+            "tag": "actividad_glosario_uso_pedagogico",
             "patterns": [
                 "¿Para qué sirve el glosario pedagógicamente?",
                 "Beneficios del glosario en educación",
@@ -631,7 +732,7 @@
             ]
         },
         {
-            "tag": "diseño_instruccional_glosario",
+            "tag": "actividad_glosario_diseño_instruccional",
             "patterns": [
                 "¿Cómo diseñar actividades con glosario?",
                 "Buenas prácticas para usar glosarios",
@@ -644,7 +745,7 @@
             ]
         },
         {
-            "tag": "descripcion_base_de_datos",
+            "tag": "actividad_base_de_datos",
             "patterns": [
                 "¿Qué es la actividad Base de datos?",
                 "¿Para qué sirve la actividad Base de datos?",
@@ -657,11 +758,11 @@
             ]
         },
         {
-            "tag": "uso_pedagogico_base_de_datos",
+            "tag": "actividad_base_de_datos_uso_pedagogico",
             "patterns": [
                 "¿Qué enfoque pedagógico tiene la actividad Base de datos?",
                 "¿Qué competencias promueve la base de datos?",
-                "¿Cuál es el uso pedagógico de esta actividad?"
+                "¿Cuál es el uso pedagógico de una base de datos?"
             ],
             "responses": [
                 "Permite trabajar desde un enfoque pedagógico constructivista y situado.",
@@ -670,10 +771,10 @@
             ]
         },
         {
-            "tag": "planificacion_base_de_datos",
+            "tag": "actividad_base_de_datos_planificacion",
             "patterns": [
                 "¿Qué tener en cuenta al planificar una base de datos educativa?",
-                "¿Cómo se planifica esta actividad?",
+                "¿Cómo se planifica una base de datos?",
                 "¿Qué pasos debo seguir para planificarla bien?"
             ],
             "responses": [
@@ -682,7 +783,7 @@
             ]
         },
         {
-            "tag": "configuracion_base_de_datos",
+            "tag": "actividad_base_de_datos_configuracion",
             "patterns": [
                 "¿Qué configuraciones técnicas tiene la base de datos?",
                 "¿Cómo se configura la actividad base de datos?",
@@ -694,11 +795,11 @@
             ]
         },
         {
-            "tag": "ejemplo_base_de_datos_formacion_profesional",
+            "tag": "actividad_base_de_datos_ejemplo",
             "patterns": [
                 "¿Hay un ejemplo de base de datos en Formación Profesional?",
-                "¿Cómo se aplica esta actividad en Formación Profesional?",
-                "¿Qué ejemplo concreto se puede hacer con esta actividad?"
+                "¿Cómo se aplica una base de datos en Formación Profesional?",
+                "¿Qué ejemplo concreto se puede hacer con una base de datos?"
             ],
             "responses": [
                 "Sí, un ejemplo es el 'Banco de Recursos para Buscar Empleo', donde los estudiantes comparten recursos útiles para buscar trabajo.",
@@ -706,19 +807,18 @@
             ]
         },
         {
-            "tag": "buenas_practicas_base_de_datos",
+            "tag": "actividad_base_de_datos_buenas_practicas",
             "patterns": [
-                "¿Cuáles son las buenas prácticas para esta actividad?",
-                "¿Qué prácticas se recomiendan para usar esta actividad?",
+                "¿Cuáles son las buenas prácticas para una base de datos?",
+                "¿Qué prácticas se recomiendan para usar una base de datos?",
                 "¿Cómo mejorar el uso de la base de datos?"
             ],
             "responses": [
-                "Diseñar pocos campos simples, modelar con ejemplos, promover la lectura de las producciones de otros estudiantes y reutilizar la base.",
-                "Estas prácticas favorecen la participación, reducen errores y aportan sentido a la actividad."
+                "• Diseñar campos simples y claros: Facilita la participación y coherencia.\n• Modelar con entradas de ejemplo: Reduce la inseguridad y errores.\n• Promover la lectura entre pares: Enriquece la visión y promueve diálogo.\n• Usar la base como insumo para actividades posteriores: Aumenta su relevancia y sentido."
             ]
         },
         {
-            "tag": "descripcion_leccion",
+            "tag": "actividad_leccion",
             "patterns": [
                 "¿Qué es una lección?",
                 "¿Qué hace la actividad lección?",
@@ -730,7 +830,7 @@
             ]
         },
         {
-            "tag": "utilidad_leccion",
+            "tag": "actividad_leccion_utilidad",
             "patterns": [
                 "¿Para qué sirve la lección?",
                 "¿Cuál es la finalidad de una lección?",
@@ -742,7 +842,7 @@
             ]
         },
         {
-            "tag": "pertinencia_pedagogica_leccion",
+            "tag": "actividad_leccion_pertinencia_pedagogica",
             "patterns": [
                 "¿Qué valor pedagógico tiene la lección?",
                 "¿Cuál es la pertinencia pedagógica de la lección?",
@@ -754,7 +854,7 @@
             ]
         },
         {
-            "tag": "diseno_instruccional_leccion",
+            "tag": "actividad_leccion_diseno_instruccional",
             "patterns": [
                 "¿Cómo se diseña una lección?",
                 "¿Qué tener en cuenta al crear una lección?",
@@ -766,7 +866,7 @@
             ]
         },
         {
-            "tag": "configuracion_tecnica_leccion",
+            "tag": "actividad_leccion_configuracion_tecnica",
             "patterns": [
                 "¿Qué configuraciones técnicas tiene la lección?",
                 "¿Qué opciones técnicas permite la lección?",
@@ -778,7 +878,7 @@
             ]
         },
         {
-            "tag": "ejemplo_aplicado_leccion",
+            "tag": "actividad_leccion_ejemplo",
             "patterns": [
                 "¿Hay un ejemplo de lección aplicada?",
                 "¿Cómo se aplica la lección en un contexto real?",
@@ -790,7 +890,7 @@
             ]
         },
         {
-            "tag": "buenas_practicas_leccion",
+            "tag": "actividad_leccion_buenas_practicas",
             "patterns": [
                 "¿Qué buenas prácticas recomiendan para usar la lección?",
                 "¿Cómo mejorar el uso de la lección?",
@@ -883,18 +983,6 @@
             "responses": [
                 "Recursos como el Libro, H5P y el Checklist favorecen el aprendizaje autónomo.",
                 "Puedes combinar contenido bien organizado con actividades que los estudiantes gestionen por sí mismos."
-            ]
-        },
-        {
-            "tag": "actividad_practica",
-            "patterns": [
-                "¿Qué tengo que hacer en la actividad práctica?",
-                "¿Cómo hago para agregar un recurso en Moodle?",
-                "Explicame la actividad práctica paso a paso"
-            ],
-            "responses": [
-                "Debes ingresar a un curso con permisos de edición, activar el modo de edición, hacer clic en 'Añadir una actividad o recurso' y probar agregar un Libro y un Foro.",
-                "Explorá el selector de actividades para identificar recursos y actividades, y practicá agregando contenido como se indica."
             ]
         },
         {
@@ -1002,19 +1090,6 @@
             "responses": [
                 "Activa edición, haz clic en 'Añadir una actividad o recurso', selecciona 'Archivo', sube el documento y guarda los cambios.",
                 "Puedes subir archivos desde la opción 'Archivo' o 'Etiqueta', arrastrando el documento o seleccionándolo desde tu equipo."
-            ]
-        },
-        {
-            "tag": "configurar_cuestionario",
-            "patterns": [
-                "¿Cómo creo un cuestionario?",
-                "Hacer preguntas en Moodle",
-                "Configurar un examen en línea",
-                "Crear evaluación tipo test"
-            ],
-            "responses": [
-                "Primero, agrega una actividad de tipo 'Cuestionario', configura los parámetros y luego añade las preguntas desde el banco o nuevas.",
-                "Puedes usar preguntas de opción múltiple, verdadero/falso, respuestas cortas y más desde la actividad 'Cuestionario'."
             ]
         },
         {
