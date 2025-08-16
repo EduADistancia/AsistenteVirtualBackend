@@ -13,7 +13,7 @@ lemmatizer = WordNetLemmatizer()
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-intents = json.loads(open(os.path.join(BASE_DIR, 'intents.json'), 'r', encoding='utf-8').read())
+intents = json.loads(open(os.path.join(BASE_DIR, 'intents_updated.json'), 'r', encoding='utf-8').read())
 words = pickle.load(open(os.path.join(BASE_DIR, 'words.pkl'), 'rb'))
 classes = pickle.load(open(os.path.join(BASE_DIR, 'classes.pkl'), 'rb'))
 model = load_model(os.path.join(BASE_DIR, 'chatbot_model.h5'))
@@ -68,8 +68,14 @@ def get_related_intents_by_similarity(current_tag, current_patterns, intents_jso
 
 def get_response_with_related_intents(intents_list, intents_json):
     if not intents_list:
+        # return {
+        #     "response": "Lo siento, no entendí tu mensaje.",
+        #     "related_intents": []
+        # }
+        
         return {
-            "response": "Lo siento, no entendí tu mensaje.",
+            "text": "Lo siento, no entendí tu mensaje.",
+            "video": None,
             "related_intents": []
         }
 
@@ -82,13 +88,25 @@ def get_response_with_related_intents(intents_list, intents_json):
             related_intents = get_related_intents_by_similarity(
                 tag, intent['patterns'], intents_json
             )
+            # return {
+            #     "response": response,
+            #     "related_intents": related_intents
+            # }
+            
             return {
-                "response": response,
+                "text": response["text"],
+                "video": response.get("video"),  # usamos get por si algún intent no tiene video
                 "related_intents": related_intents
             }
 
+    # return {
+    #     "response": "Lo siento, no entendí tu mensaje.",
+    #     "related_intents": []
+    # }
+    
     return {
-        "response": "Lo siento, no entendí tu mensaje.",
+        "text": "Lo siento, no entendí tu mensaje.",
+        "video": None,
         "related_intents": []
     }
 

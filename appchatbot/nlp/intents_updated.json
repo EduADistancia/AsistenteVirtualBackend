@@ -1,0 +1,1594 @@
+{
+    "intents": [
+        {
+            "tag": "saludo",
+            "patterns": [
+                "Hola",
+                "Buen día",
+                "Buenas tardes",
+                "Hola, ¿cómo estás?",
+                "Saludos",
+                "Buenas",
+                "necesito ayuda"
+            ],
+            "responses": [
+                {
+                    "text": "¡Hola! ¿En qué puedo ayudarte con Moodle?"
+                },
+                {
+                    "text": "Buen día, ¿cómo puedo asistirte con el uso de Moodle?"
+                }
+            ]
+        },
+        {
+            "tag": "agradecimiento",
+            "patterns": [
+                "Gracias",
+                "Muchas gracias",
+                "Te agradezco",
+                "Gracias por la ayuda",
+                "Muy amable",
+                "Adiós",
+                "Hasta luego"
+            ],
+            "responses": [
+                {
+                    "text": "¡De nada! Si necesitas algo más sobre Moodle, aquí estoy."
+                },
+                {
+                    "text": "Con gusto. Estoy para ayudarte con todo lo relacionado a Moodle."
+                }
+            ]
+        },
+        {
+            "tag": "que_es_moodle",
+            "patterns": [
+                "¿Qué es Moodle?",
+                "¿Para qué sirve Moodle?",
+                "¿Cómo funciona Moodle?",
+                "Explicame qué es Moodle",
+                "¿Moodle es un aula virtual?"
+            ],
+            "responses": [
+                {
+                    "text": "Moodle es una plataforma digital (o sistema en línea) diseñada para acompañar procesos de enseñanza y aprendizaje a través de internet.\nEs un sistema de código abierto, lo que significa que puede ser adaptado y gestionado por instituciones educativas según sus necesidades."
+                }
+            ]
+        },
+        {
+            "tag": "que_es_moodle_significado",
+            "patterns": [
+                "¿Qué significa Moodle?",
+                "siglas de Moodle",
+                "significado Moodle"
+            ],
+            "responses": [
+                {
+                    "text": "Su nombre significa:\nMOODLE = Modular Object-Oriented Dynamic Learning Environment\n(Entorno Modular de Aprendizaje Dinámico y Orientado a Objetos)"
+                }
+            ]
+        },
+        {
+            "tag": "moodle_institucional",
+            "patterns": [
+                "¿Cómo se usa Moodle en la institución?",
+                "¿Moodle solo es para clases?",
+                "¿Qué funciones institucionales tiene Moodle?",
+                "¿Qué hace Moodle como sistema institucional?",
+                "¿Qué roles tiene Moodle?"
+            ],
+            "responses": [
+                {
+                    "text": "Moodle permite gestionar usuarios, cursos, calendarios, trayectorias académicas y documentos según los roles de cada usuario."
+                },
+                {
+                    "text": "No es solo un aula virtual; Moodle es una infraestructura educativa completa con múltiples funciones institucionales."
+                },
+                {
+                    "text": "Sus funciones institucionales incluyen:\n\n• Gestión de usuarios: docentes, estudiantes, tutores, gestores, administradores.\n• Organización de cursos: cada asignatura o espacio de formación se crea como un \"curso virtual\".\n• Calendario institucional: permite organizar fechas, entregas y exámenes.\n• Seguimiento de trayectorias: cada acción que realiza un estudiante queda registrada (ingresos, entregas, participación).\n• Base de datos educativa: almacena calificaciones, tareas entregadas, asistencia y participación.\n• Gestión documental: permite compartir y archivar documentos, presentaciones, informes, etc.\n• Acceso por roles: cada usuario tiene permisos distintos según su rol (por ejemplo: el profesor puede crear actividades, el estudiante no).\n\nMoodle se usa en muchas Instituciones educativas como soporte de enseñanza híbrida o virtual."
+                }
+            ]
+        },
+        {
+            "tag": "moodle_pedagogico",
+            "patterns": [
+                "¿Cómo puedo usar Moodle para enseñar?",
+                "¿Qué herramientas pedagógicas tiene Moodle?",
+                "¿Qué puedo hacer como docente en Moodle?",
+                "¿Puedo calificar tareas en Moodle?",
+                "¿Se puede dar devoluciones por Moodle?"
+            ],
+            "responses": [
+                {
+                    "text": "Moodle permite crear clases virtuales, cargar materiales, diseñar actividades, calificar y dar devoluciones personalizadas."
+                },
+                {
+                    "text": "Como docente podés crear y organizar unidades temáticas, diseñar cuestionarios, tareas y foros de debate, entre otras herramientas."
+                }
+            ]
+        },
+        {
+            "tag": "moodle_pedagogico_docentes",
+            "patterns": [
+                "¿Qué herramientas pedagógicas tiene Moodle para docentes?",
+                "¿Qué me permite Moodle pedagógicamente cómo docente?"
+            ],
+            "responses": [
+                {
+                    "text": "Moodle está pensado para enseñar y aprender. Por eso se lo llama un Entorno Virtual de Aprendizaje (EVA).\n\nPermite a los docentes:\n• Crear clases virtuales organizadas en unidades o temas.\n• Cargar materiales de lectura, videos, enlaces, archivos.\n• Diseñar actividades: tareas, cuestionarios, foros de debate, wikis, encuestas, lecciones interactivas, etc.\n• Calificar automáticamente o de forma manual.\n• Dar devoluciones personalizadas a los trabajos.\n• Favorecer el aprendizaje autónomo con materiales disponibles las 24 horas."
+                }
+            ]
+        },
+        {
+            "tag": "moodle_pedagogico_estudiantes",
+            "patterns": [
+                "¿Qué herramientas pedagógicas tiene Moodle para estudiantes?",
+                "¿Qué permite realizar a los estudiantes?"
+            ],
+            "responses": [
+                {
+                    "text": "Moodle permite a los estudiantes:\n• Acceder a las clases desde computadora o celular.\n• Revisar materiales cuando lo necesiten.\n• Entregar tareas en línea.\n• Participar en foros o chats con docentes y compañeros.\n• Ver sus calificaciones y retroalimentaciones."
+                }
+            ]
+        },
+        {
+            "tag": "estructura_moodle",
+            "patterns": [
+                "¿Cómo está organizado Moodle?",
+                "¿Qué niveles tiene Moodle?",
+                "¿Qué es un curso en Moodle?",
+                "¿Qué significa categoría o sección en Moodle?",
+                "¿Qué es un recurso o actividad en Moodle?"
+            ],
+            "responses": [
+                {
+                    "text": "Moodle se organiza en niveles: Sitio, Categoría, Curso, Tema o sección, y Actividad o recurso."
+                },
+                {
+                    "text": "Moodle funciona como un sitio web privado, al que solo ingresan quienes tienen usuario y contraseña."
+                },
+                {
+                    "text": "Estructura general:\n\nNivel: ¿Qué es? | Ejemplo\n• Sitio Moodle: Toda la plataforma (de una escuela, institución) | moodle.escuelatecnica.edu.ar\n• Categoría: Área de cursos o nivel educativo | Formación Profesional / 5to Año / Capacitación Docente\n• Curso: Aula virtual específica | Introducción al Trabajo / Curso X\n• Tema o sección: Unidad de contenido dentro del curso | Unidad 1 - Derechos laborales / Tema 2 - Evaluación\n• Actividad o recurso: Elemento específico | Tarea: investigación / Foro: presentación / PDF de lectura"
+                }
+            ]
+        },
+        {
+            "tag": "datos_academicos",
+            "patterns": [
+                "¿Qué datos académicos gestiona Moodle?",
+                "¿Qué datos se pueden ver en Moodle?",
+                "¿Qué seguimiento puedo hacer a los estudiantes?",
+                "¿Qué informes puedo ver como docente?",
+                "¿Moodle guarda información de los estudiantes?",
+                "¿Puedo saber si un estudiante accedió a la clase?"
+            ],
+            "responses": [
+                {
+                    "text": "Moodle permite acceder a datos como accesos, materiales vistos, tareas entregadas, calificaciones y participación en foros."
+                },
+                {
+                    "text": "Sí, Moodle guarda información detallada para hacer un seguimiento pedagógico y tomar decisiones educativas informadas."
+                },
+                {
+                    "text": "Moodle permite a la institución y a los docentes recopilar, organizar y analizar datos educativos, como:\n\n• Fecha y hora de acceso de cada estudiante.\n• Qué materiales visualizó, cuántas veces.\n• Qué tareas entregó y cuáles no.\n• Calificaciones por actividad.\n• Participación en foros o mensajes.\n• Informes de progreso (por curso, por estudiante, por grupo).\nEsto permite una mejor toma de decisiones pedagógicas, más seguimiento individualizado y más equidad."
+                }
+            ]
+        },
+        {
+            "tag": "funciones_moodle_resumen",
+            "patterns": [
+                "¿Cuáles son las funciones principales de Moodle?",
+                "Resumime para qué sirve Moodle",
+                "¿Qué puedo hacer con Moodle como docente?",
+                "¿Qué puedo hacer como no docente en Moodle?"
+            ],
+            "responses": [
+                {
+                    "text": "Moodle permite crear cursos, subir recursos, diseñar actividades, hacer seguimiento académico y administrar usuarios y contenidos."
+                },
+                {
+                    "text": "Sus funciones principales incluyen gestión educativa, diseño pedagógico y seguimiento del aprendizaje."
+                }
+            ]
+        },
+        {
+            "tag": "funciones_moodle_rol",
+            "patterns": [
+                "¿Cómo se categorizan las funciones según el rol?",
+                "¿Qué acciones se pueden realizar según el rol?",
+                "Distribución de las funciones según rol",
+                "Resumen de funciones y usos"
+            ],
+            "responses": [
+                {
+                    "text": "Función: ¿Para que sirve? - ¿Quién la usa?\n• Crear cursos y cargar materiales: Preparar clases virtuales - Docente / Creador\n• Participar en clases y entregar tareas: Aprender y demostrar lo aprendido - Estudiante\n• Monitorear progreso y asistencia: Verificar participación - Docente / Tutor\n• Registrar calificaciones y retroalimentar: Evaluar el proceso - Docente\n• Generar informes y estadísticas: Tomar decisiones educativas - Institución\n• Controlar permisos y accesos: Asegurar funcionamiento y privacidad - Administrador\n"
+                }
+            ]
+        },
+        {
+            "tag": "crear_aula_individual",
+            "patterns": [
+                "¿Cómo agregar un aula?",
+                "¿Cómo creo un aula en Moodle?",
+                "Pasos para crear un curso individual en Moodle",
+                "¿Qué permisos necesito para crear un aula?",
+                "Crear curso desde cero",
+                "Crear aula individual",
+                "¿Cómo agregar un nuevo curso en Moodle?",
+                "Cambiar banners del aula"
+            ],
+            "responses": [
+                {
+                    "text": "Para crear un aula virtual individual en Moodle:\n\n1. Ingresá con un usuario con rol de Administrador o Gestor de cursos.\n2. Accedé a Administración del sitio > Cursos > Agregar un curso nuevo.\n3. Hacé clic en 'Crear nuevo curso'.\n4. Completá los campos obligatorios como Nombre completo, Nombre corto y Categoría.\n5. Elegí el formato del curso.\n6. Hacé clic en 'Guardar cambios y mostrar'.",
+                    "video": "https://youtu.be/B-w17-LxDFE"
+                }
+            ]
+        },
+        {
+            "tag": "crear_aula_csv",
+            "patterns": [
+                "¿Cómo agregar un aula por CSV?",
+                "¿Cómo puedo crear varias aulas a la vez?",
+                "Crear aulas en forma masiva",
+                "¿Qué es un archivo CSV en Moodle?",
+                "Subir cursos con archivo CSV",
+                "Cargar aulas masivamente en Moodle"
+            ],
+            "responses": [
+                {
+                    "text": "Para crear aulas en forma masiva:\n\n1. Usá un archivo CSV donde cada fila represente un curso nuevo.\n2. Asegurate de que incluya los campos requeridos como 'fullname', 'shortname', 'category', entre otros.\n3. Accedé a Administración del sitio > Cursos > Subir cursos.\n4. Cargá el archivo CSV y seguí las instrucciones.\n\nUn archivo CSV es un archivo de texto plano que podés generar desde Excel o LibreOffice.",
+                    "video": "https://youtu.be/yaBA6cJQKc8"
+                }
+            ]
+        },
+        {
+            "tag": "duplicar_aula",
+            "patterns": [
+                "¿Puedo duplicar un curso ya creado?",
+                "Duplicar aula virtual en Moodle",
+                "Crear copia de un aula existente",
+                "Clonar curso en Moodle",
+                "Reutilizar un curso anterior"
+            ],
+            "responses": [
+                {
+                    "text": "Sí, podés duplicar un aula existente utilizando una copia de seguridad.\n\n1. Entrá al curso que querés duplicar.\n2. Desde el menú de administración del curso, seleccioná 'Copia de seguridad'.\n3. Completá los pasos y descargá el archivo .mbz.\n4. Para restaurarlo, accedé a Administración del sitio > Cursos > Restaurar.\n5. Subí el archivo .mbz y seguí los pasos para crear un curso nuevo a partir del existente.",
+                    "video": "https://youtu.be/sJ7TR_57NUk"
+                }
+            ]
+        },
+        {
+            "tag": "copia_seguridad_restauracion_curso",
+            "patterns": [
+                "¿Cómo hago una copia de seguridad de un curso?",
+                "Restaurar un curso desde archivo .mbz",
+                "Backup de curso en Moodle",
+                "Recuperar curso anterior",
+                "Crear copia de seguridad"
+            ],
+            "responses": [
+                {
+                    "text": "Para realizar una copia de seguridad:\n\n1. Ingresá al curso que querés respaldar.\n2. En el menú de administración del curso, hacé clic en 'Copia de seguridad'.\n3. Seguís los pasos y descargás el archivo generado (.mbz).\n\nPara restaurar:\n\n1. Andá a Administración del sitio > Cursos > Restaurar.\n2. Subí el archivo .mbz.\n3. Completá los pasos para importar el curso en una nueva aula o sobreescribir una existente."
+                }
+            ]
+        },
+        {
+            "tag": "recurso_actividad",
+            "patterns": [
+                "¿Cuál es la diferencia entre recurso y actividad en Moodle?",
+                "¿Qué es un recurso y qué es una actividad?",
+                "Diferencia entre recursos y actividades",
+                "¿Para qué sirve un recurso en Moodle?",
+                "¿Qué significa actividad en Moodle?"
+            ],
+            "responses": [
+                {
+                    "text": "Un recurso en Moodle es un contenido que el docente publica para que los estudiantes lo consulten o visualicen. No genera una acción interactiva ni se califica. En cambio, una *actividad* es un elemento que requiere una acción del estudiante, como responder, subir archivos o participar. Moodle registra esa acción y puede calificarla. Ambas se agregan desde el botón “Añadir una actividad o recurso” en el modo de edición."
+                }
+            ]
+        },
+        {
+            "tag": "agregar_recurso_actividad",
+            "patterns": [
+                "¿Cómo crear una actividad?",
+                "¿Cómo agrego una actividad en Moodle?",
+                "¿Cómo se añaden recursos?",
+                "Agregar recurso o actividad",
+                "¿Cómo insertar un recurso o actividad?",
+                "¿Cómo se publican archivos o tareas?"
+            ],
+            "responses": [
+                {
+                    "text": "Para agregar recursos o actividades en Moodle, primero activá el modo de edición. Luego, dentro de la sección deseada del curso, hacé clic en “Añadir una actividad o recurso”. Moodle te mostrará un selector donde cada ítem tiene su ícono, una breve descripción y un enlace a ayuda ampliada."
+                }
+            ]
+        },
+        {
+            "tag": "tipos_actividad",
+            "patterns": [
+                "¿Qué tipos de actividades hay en Moodle?",
+                "¿Qué actividades puedo crear?",
+                "Opciones de actividades en Moodle"
+            ],
+            "responses": [
+                {
+                    "text": "Puedes crear tareas, cuestionarios, foros, wikis, SCORM, encuestas, entre otras."
+                },
+                {
+                    "text": "Moodle permite varios tipos de actividades como tarea, cuestionario, foro, glosario, entre otros."
+                }
+            ]
+        },
+        {
+            "tag": "editar_actividad",
+            "patterns": [
+                "¿Cómo edito una actividad?",
+                "Modificar una tarea ya creada",
+                "Cambiar la configuración de una actividad",
+                "Editar actividad en Moodle"
+            ],
+            "responses": [
+                {
+                    "text": "Activa la edición, haz clic en 'Editar' junto a la actividad y selecciona 'Editar ajustes'."
+                },
+                {
+                    "text": "Para editar una actividad, primero activa edición y luego haz clic en el ícono de engranaje o en el menú 'Editar'."
+                }
+            ]
+        },
+        {
+            "tag": "recurso_archivo",
+            "patterns": [
+                "¿Para qué sirve el recurso Archivo en Moodle?",
+                "¿Qué hace el recurso Archivo?",
+                "¿Puedo subir un PDF a Moodle?",
+                "Quiero compartir documentos con estudiantes",
+                "¿Cómo uso el recurso Archivo en el aula?"
+            ],
+            "responses": [
+                {
+                    "text": "El recurso Archivo permite subir un único archivo que los estudiantes pueden descargar o visualizar en línea. Puede ser un PDF, documento Word, presentación, imagen, audio o planilla. Es ideal para compartir materiales estables como documentos oficiales, textos guía, ejemplos o casos.\n • Diseño instruccional: Ubicalo dentro de una secuencia didáctica clara, con una descripción orientadora visible. Evitá nombres genéricos como 'documento1.pdf'.\n • Enfoque tecnopedagógico: Asegurate de que el archivo sea accesible desde distintos dispositivos y no sea demasiado pesado. Si Moodle tiene un visibilizador habilitado, usalo para que puedan leer sin descargar.\n • Ejemplo aplicado: Archivo: 'Normativa de Higiene y Seguridad en el Trabajo.pdf'. Se usa como lectura previa antes de una tarea crítica + cuestionario. Se indica: 'Subrayá los artículos que ya se aplican en tu experiencia cotidiana'."
+                }
+            ]
+        },
+        {
+            "tag": "recurso_carpeta",
+            "patterns": [
+                "¿Para qué sirve el recurso Carpeta en Moodle?",
+                "¿Qué hace el recurso Carpeta?",
+                "¿Puedo subir varios archivos juntos?",
+                "Quiero organizar documentos por unidad",
+                "¿Cómo agrupar materiales en Moodle?"
+            ],
+            "responses": [
+                {
+                    "text": "El recurso Carpeta permite agrupar varios archivos en un solo recurso. Se pueden mostrar como una lista expandida o como una carpeta comprimida para descargar. Es útil para compartir bibliografía, módulos temáticos, imágenes, guías o audios.\n• Diseño instruccional: Usá carpetas para evitar saturar el aula con muchos archivos sueltos. Ordená los contenidos según el recorrido del curso.\n• Pertinencia pedagógica: Fomenta el acceso autónomo, la exploración y la comparación de materiales. Es ideal cuando el estudiante puede elegir qué contenidos priorizar.\n• Ejemplo: Carpeta con guías por unidad que se muestran como lista expandida dentro del tema 'Material de consulta'."
+                }
+            ]
+        },
+        {
+            "tag": "recurso_pagina",
+            "patterns": [
+                "¿Qué es el recurso página?",
+                "¿Qué es una página?",
+                "¿Para qué sirve página?"
+            ],
+            "responses": [
+                {
+                    "text": "Crea un recurso de contenido dentro de Moodle que se visualiza como una página web simple. El contenido se edita directamente usando el editor HTML integrado, y puede incluir texto, imágenes, videos, enlaces, tablas, íconos, entre otros elementos.\n\n• Para crear contenidos propios del docente, sin necesidad de subir archivos.\n• Para presentar clases, apuntes, orientaciones o instrucciones con formato enriquecido y diseño visual.\n• Para ofrecer materiales que el estudiante puede consultar sin descargar nada."
+                }
+            ]
+        },
+        {
+            "tag": "recurso_pagina_pertinencia_pedagogica",
+            "patterns": [
+                "Beneficios pedagógicos de la página",
+                "¿Cuáles son los beneficios pedagógicos de la página?",
+                "¿Por qué es conveniente usar una página?"
+            ],
+            "responses": [
+                {
+                    "text": "La Página funciona como un “espacio didáctico independiente”, donde el docente puede:\n\n• Articular información teórica y práctica en un mismo entorno.\n• Organizar los saberes de forma jerarquizada y progresiva.\n• Incorporar instrucciones claras, recursos visuales y vínculos de interés.\n\nEs ideal cuando se busca un enfoque multimodal, es decir, que combine texto, imagen, video y enlace, favoreciendo la comprensión para estudiantes con distintos estilos de aprendizaje."
+                }
+            ]
+        },
+        {
+            "tag": "recurso_pagina_diseño_instruccional",
+            "patterns": [
+                "¿Cómo diseño una página?",
+                "Características de una página",
+                "Estilo en una página"
+            ],
+            "responses": [
+                {
+                    "text": "• Pensar la Página como una unidad mínima de clase o subclase.\n• Usar títulos, subtítulos y listas para facilitar la lectura en pantalla.\n• Incorporar preguntas guía o actividades de lectura activa.\n• Emplear el color, los íconos o el espaciado como elementos de apoyo visual, pero sin sobrecargar.\n\nVentaja adicional: Al estar dentro de Moodle, el contenido de la Página es más accesible para estudiantes con conectividad limitada que si se tratara de archivos adjuntos."
+                }
+            ]
+        },
+        {
+            "tag": "recurso_pagina_enfoque_tecnopedagogico",
+            "patterns": [
+                "Ventajas del recurso página",
+                "¿Cuáles son las ventajas del recurso página?",
+                "Beneficios del recurso página"
+            ],
+            "responses": [
+                {
+                    "text": "• Evita la dependencia de software externo (como Word o PDF).\n• Se adapta mejor a celulares y tablets.\n• Permite editar rápidamente los contenidos sin volver a subir archivos.\n• Puede contener videos embebidos desde YouTube, Drive o Vimeo, sin aumentar el peso del curso."
+                }
+            ]
+        },
+        {
+            "tag": "recurso_url",
+            "patterns": [
+                "¿Cómo puedo incluir enlaces a páginas externas en mi curso Moodle?",
+                "Quiero agregar un video de YouTube o un documento de Google Drive al aula.",
+                "¿Se puede enlazar a otra plataforma desde Moodle?",
+                "¿Puedo usar un link para enviar a los estudiantes a una página de la OIT?"
+            ],
+            "responses": [
+                {
+                    "text": "Podés usar el recurso URL en Moodle para enlazar a cualquier sitio web externo, como páginas informativas, videos, simuladores o incluso otros cursos Moodle. Es importante acompañar el enlace con una descripción pedagógica clara y consignas que orienten la lectura o el uso del recurso. También podés configurar si el enlace se abre en una nueva pestaña o en la misma ventana."
+                }
+            ]
+        },
+        {
+            "tag": "recurso_url_beneficios_pedagogicos",
+            "patterns": [
+                "¿Para qué sirve el recurso URL en Moodle?",
+                "¿Qué ventajas tiene usar links en vez de subir archivos?",
+                "¿Qué valor pedagógico tiene poner un enlace?",
+                "¿Por qué usar enlaces externos en lugar de materiales dentro del aula?"
+            ],
+            "responses": [
+                {
+                    "text": "El recurso URL es muy útil para integrar contenidos actualizados, interactivos y confiables sin sobrecargar el aula virtual. Se alinea con un enfoque abierto y conectivista del aprendizaje, permitiendo conectar a los estudiantes con saberes distribuidos en la web. Además, promueve la alfabetización digital crítica, el acceso a fuentes confiables (como organismos oficiales) y la profundización para estudiantes con más interés."
+                }
+            ]
+        },
+        {
+            "tag": "recurso_url_significado_didactico",
+            "patterns": [
+                "¿Cómo hago para que los enlaces tengan sentido pedagógico?",
+                "¿Está bien poner \"hacé clic aquí\"?",
+                "¿Cómo uso un link como consigna o disparador?",
+                "¿Cómo logro que el enlace no quede fuera de contexto?"
+            ],
+            "responses": [
+                {
+                    "text": "Para que un enlace tenga valor didáctico, es fundamental acompañarlo con una consigna pedagógica clara. No se recomienda usar frases genéricas como “clic aquí”. En cambio, podés plantear preguntas guía o consignas del tipo: “¿Qué parte te llamó la atención y por qué?” o “¿Qué datos relevantes encontrás?”. El enlace puede funcionar como disparador de actividades de debate, reflexión o producción."
+                }
+            ]
+        },
+        {
+            "tag": "recurso_url_forma_tecnopedagogica",
+            "patterns": [
+                "¿Cómo saber si el recurso URL funciona bien en celulares?",
+                "¿Puedo ver si los estudiantes hicieron clic en el link?",
+                "¿Qué debo revisar antes de usar una URL en Moodle?",
+                "¿Es un recurso pesado o liviano?"
+            ],
+            "responses": [
+                {
+                    "text": "El recurso URL es una herramienta ligera, ideal para cursos con poco espacio o con estudiantes que usan celular. Antes de usarlo, es importante testear que el sitio funcione bien en móviles y que no requiera contraseñas o registros innecesarios. Además, Moodle permite hacer seguimiento de clics si se configura el rastreo de finalización."
+                }
+            ]
+        },
+        {
+            "tag": "recurso_libro",
+            "patterns": [
+                "¿Cómo puedo organizar un contenido largo en Moodle?",
+                "Quiero crear un manual con capítulos.",
+                "¿Puedo hacer algo como un libro digital en el aula?",
+                "¿Qué herramienta me permite estructurar bien los temas?"
+            ],
+            "responses": [
+                {
+                    "text": "El recurso Libro en Moodle permite crear contenidos organizados en capítulos y subcapítulos, como si fuera un libro digital. Es ideal para desarrollar manuales, guías, apuntes o clases extensas con estructura jerárquica. Cada capítulo es una página navegable, donde podés incluir texto, imágenes, enlaces, videos y más."
+                }
+            ]
+        },
+        {
+            "tag": "recurso_libro_beneficios_pedagogicos",
+            "patterns": [
+                "¿Qué ventajas tiene usar el recurso Libro?",
+                "¿Por qué usar un libro en lugar de subir PDFs sueltos?",
+                "¿Sirve para el aprendizaje autónomo el recurso libro?",
+                "¿Se pueden incluir actividades dentro del libro?"
+            ],
+            "responses": [
+                {
+                    "text": "El Libro favorece un aprendizaje progresivo, ordenado y autónomo, con navegación fluida y sin necesidad de descargar archivos. Permite integrar saberes conceptuales, procedimentales y actitudinales en un solo recurso. Además, podés incluir preguntas de reflexión o autoevaluación al final de cada capítulo, promoviendo una didáctica activa."
+                }
+            ]
+        },
+        {
+            "tag": "recurso_libro_diseño",
+            "patterns": [
+                "¿Cómo diseño un libro dentro de Moodle?",
+                "¿Qué estructura debería tener un libro?",
+                "¿Cómo organizo los capítulos de un libro?",
+                "¿Qué tipo de contenido puedo incluir en un libro?"
+            ],
+            "responses": [
+                {
+                    "text": "Te recomendamos diseñar el libro con una estructura pedagógica clara: introducción, desarrollo y cierre. Podés dividirlo por unidades o funciones (como Teoría / Caso práctico / Actividad sugerida). Es útil usar títulos claros, imágenes, videos y consignas. El recurso Libro permite construir un recorrido temático sólido y visualmente atractivo, ideal para el estudio autónomo."
+                }
+            ]
+        },
+        {
+            "tag": "recurso_etiqueta",
+            "patterns": [
+                "¿Que es el recurso Etiqueta?",
+                "¿Para qué sirve el recurso Etiqueta?",
+                "¿Qué hace el recurso Etiqueta?",
+                "Area de texto y medios"
+            ],
+            "responses": [
+                {
+                    "text": "El recurso Etiqueta permite insertar pequeños bloques de contenido directamente en la portada del curso, sin necesidad de abrir una página aparte. Puede contener texto breve, íconos, emojis, imágenes, enlaces, separadores o elementos visuales diseñados con el editor HTML de Moodle. Se utiliza para:\n\n• Para organizar visualmente el curso.\n• Para introducir secciones, bloques o temas.\n• Para dar instrucciones breves antes de una actividad o grupo de recursos.\n• Para marcar un cambio de unidad, de modalidad o de etapa dentro del curso.\nAunque técnicamente no es un contenido en sí, es clave para la navegación y la experiencia de usuario, especialmente en cursos largos o con muchas actividades.",
+                    "video": "https://youtu.be/NSc1-ee__B4"
+                }
+            ]
+        },
+        {
+            "tag": "recurso_etiqueta_pertinencia_pedagogica",
+            "patterns": [
+                "Fundamento pedagógico de la etiqueta",
+                "¿Por qué utilizar etiquetas?",
+                "Beneficios de la etiqueta"
+            ],
+            "responses": [
+                {
+                    "text": "La etiqueta es una herramienta didáctica de orientación y señalización. Su buen uso mejora la comprensibilidad, accesibilidad y estética del aula virtual.\nDesde el punto de vista pedagógico, permite:\n\n• Ayudar a los estudiantes a identificar rápidamente qué se espera de ellos.\n• Disminuir la carga cognitiva y el desorden visual.\n• Crear “ambientes virtuales” acogedores, con sentido organizativo y pedagógico claro.\n\nUna etiqueta bien diseñada puede reemplazar la necesidad de instrucciones repetitivas dentro de cada recurso o actividad."
+                }
+            ]
+        },
+        {
+            "tag": "recurso_etiqueta_diseño_instruccional",
+            "patterns": [
+                "Recomendaciones para crear etiquetas",
+                "¿Cómo crear etiquetas?",
+                "Diseño en etiquetas"
+            ],
+            "responses": [
+                {
+                    "text": "Emplear etiquetas al inicio de cada unidad, semana o bloque de contenidos con un título claro (ej.: “ UNIDAD 1 - Introducción”).\nIncluir pequeñas orientaciones de uso, por ejemplo: “Leé el texto y luego participá del foro de reflexión”.\nUsar tipografía clara, íconos o emojis moderados, y evitar sobrecargar con colores o imágenes grandes.\nEvitar que las etiquetas se conviertan en contenido extenso: para eso es mejor usar una Página.\nEn cursos con estudiantes con escasa alfabetización digital, las etiquetas son esenciales para guiar los primeros pasos."
+                }
+            ]
+        },
+        {
+            "tag": "recurso_etiqueta_enfoque_tecnopedagogico",
+            "patterns": [
+                "¿Son reutilizables las etiquetas?",
+                "¿Qué requerimientos necesita una etiqueta?",
+                "Etiqueta enfoque tecnopegagócio"
+            ],
+            "responses": [
+                {
+                    "text": "Son recursos muy livianos y de rápida carga, ideales para cursos accesibles desde celulares.\nFavorecen la navegación autónoma.\nSon completamente editables y reutilizables.\nNo deben confundirse con recursos de contenido (no tienen seguimiento ni evaluación)."
+                }
+            ]
+        },
+        {
+            "tag": "recurso_etiqueta_buenas_practicas",
+            "patterns": [
+                "Maneras de utilizar etiquetas",
+                "¿Cómo utilizar las etiquetas?",
+                "Buenas prácticas en etiquetas"
+            ],
+            "responses": [
+                {
+                    "text": "Buenas prácticas para usar etiquetas:\n\n• Títulos claros y numerados: mejoran la orientación.\n• Breves indicaciones de acción: fomentan autonomía.\n• Íconos visuales coherentes: refuerzan memoria visual.\n• Usar etiquetas para dividir temas: facilita navegación y evita confusión."
+                }
+            ]
+        },
+        {
+            "tag": "recurso_tablero",
+            "patterns":[
+                "Configurar recurso tablero",
+                "Gestionar elementos dentro del tablero"
+            ],
+            "responses":[
+                {
+                    "text": "Configurar recurso tablero\n\n1 - Activar edición, desplarzarse hasta el recurso tablero y ocultar este tablero. \n2 - Seleccionar «Duplicar» desde los tres puntos y aparecerá una copia. \n3 - Lo editamos y le podemos poner el nombre de de la oferta y en caso de que quieran el nombre del docente. Enter. \n4 - Luego en los tres puntos seleccionar «Editar ajustes». \n5 - Seleccionar el código de grupo que va a poder ver este tablero. Si no se pone ningún grupo, ningún estudiante lo podrá ver. \n6 - En ajustes comunes del módulo, seleccionar «Mostrar en la página del curso». \n7 - En finalización de actividad, si queremos que queden los reportes del aula en los informes, vamos a poner mostrar la actividad completada cuando se cumpla alguna de las condiciones, que simplemente vea la actividad o que haga determinada cantidad de participaciones. \n8 - Guardar cambios y mostrar.",
+                    "video": "https://youtu.be/PAbDEUqxUhA"
+                },
+                {
+                    "text": "Gestionar elementos dentro del tablero\n\nEl tablero funciona como el centro de control personal del usuario, ya que ofrece una visión clara de sus cursos, actividades y fechas importantes, además de permitir cierto grado de personalización para mejorar la experiencia de estudio o de gestión.\nEn el video sugerido verás cómo utilizar éste recurso.",
+                    "video": "https://youtu.be/C7piSM5Riek"
+                }
+            ]
+        },
+        {
+            "tag": "actividad_tarea",
+            "patterns": [
+                "¿Qué es la actividad Tarea en Moodle?",
+                "¿Para qué sirve la actividad Tarea?",
+                "¿Cómo funciona la Tarea en Moodle 4.0?",
+                "¿Qué tipos de entregas admite la tarea?",
+                "¿Cómo corrige el docente una tarea?"
+            ],
+            "responses": [
+                {
+                    "text": "La actividad Tarea permite al docente recibir entregas de los estudiantes, ya sea archivos (PDF, Word, imágenes, audio) o texto escrito directamente en Moodle. El docente puede corregir, calificar y devolver retroalimentación escrita, en audio o mediante rúbricas, promoviendo la expresión autónoma y la evaluación formativa y sumativa."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_tarea_beneficios_pedagogicos",
+            "patterns": [
+                "¿Cuál es la importancia pedagógica de la Tarea?",
+                "¿Por qué usar la actividad Tarea en un curso?",
+                "¿Qué beneficios tiene la Tarea para los estudiantes?",
+                "¿Para qué sirve la tarea en la evaluación?"
+            ],
+            "responses": [
+                {
+                    "text": "La Tarea es una herramienta potente para la evaluación formativa y sumativa. Permite plantear problemas abiertos que muestran el pensamiento crítico, ofrece retroalimentación personalizada y establece criterios claros con rúbricas, favoreciendo la equidad y la producción activa y reflexiva de los estudiantes."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_tarea_configuracion_tecnica",
+            "patterns": [
+                "¿Cómo configurar una tarea en Moodle?",
+                "¿Qué opciones técnicas tiene la actividad Tarea?",
+                "¿Qué tipos de entrega permite la tarea?",
+                "¿Cómo usar rúbricas en la tarea?",
+                "¿Qué es la calificación diferida?"
+            ],
+            "responses": [
+                {
+                    "text": "La actividad Tarea permite configurar entregas como archivos subidos o texto en línea, comentarios de retroalimentación del docente, rúbricas para evaluación detallada, calificación diferida para revisar antes de publicar, recordatorios automáticos y archivos de retroalimentación para devoluciones más completas."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_tarea_ejemplo",
+            "patterns": [
+                "¿Podés dar un ejemplo de tarea para FP?",
+                "¿Cómo sería una tarea sobre riesgos laborales?",
+                "Ejemplo de consigna para tarea en seguridad e higiene",
+                "¿Qué criterios de evaluación usar en tarea de seguridad?"
+            ],
+            "responses": [
+                {
+                    "text": "Ejemplo: 'Informe de observación de riesgos laborales'. Consiste en visitar un espacio real o simulado, registrar posibles factores de riesgo, escribir un informe breve con imágenes y subir un archivo PDF antes de la fecha límite. La evaluación se realiza con una rúbrica que incluye observación, redacción y presentación, y se ofrece retroalimentación escrita y con anotaciones en PDF."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_tarea_buenas_practicas",
+            "patterns": [
+                "¿Cuáles son las buenas prácticas para usar la tarea?",
+                "¿Qué recomendaciones hay para configurar tareas?",
+                "¿Cómo mejorar la retroalimentación en tareas?",
+                "¿Por qué usar rúbricas visibles?"
+            ],
+            "responses": [
+                {
+                    "text": "Se recomienda usar rúbricas claras y visibles para mejorar la comprensión de expectativas, establecer plazos razonables para evitar sobrecarga, habilitar entregas en línea junto con archivos para mayor flexibilidad, y devolver retroalimentación útil que enriquezca el aprendizaje, no solo una nota."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_cuestionario",
+            "patterns": [
+                "¿Qué es la actividad Cuestionario en Moodle?",
+                "¿Para qué sirve el cuestionario?",
+                "¿Qué tipos de preguntas puedo usar en un cuestionario?",
+                "¿Cómo funciona un cuestionario en Moodle 4.0?"
+            ],
+            "responses": [
+                {
+                    "text": "La actividad Cuestionario permite crear pruebas automatizadas con diversos tipos de preguntas para evaluar conocimientos, ofrecer autoevaluación, presentar casos con retroalimentación inmediata y recoger información diagnóstica. Es útil para evaluar distintos niveles cognitivos y promover el aprendizaje activo.",
+                    "video": "https://youtu.be/fHAihEWk3FA"
+                }
+            ]
+        },
+        {
+            "tag": "actividad_cuestionario_tipos_preguntas",
+            "patterns": [
+                "¿Qué tipos de preguntas hay en los cuestionarios?",
+                "¿Qué significa opción múltiple?",
+                "¿Para qué sirve la pregunta de ensayo?",
+                "¿Qué es una pregunta numérica en cuestionario?"
+            ],
+            "responses": [
+                {
+                    "text": "Los tipos de preguntas incluyen opción múltiple (una o varias respuestas válidas), falso/verdadero para control rápido, respuesta corta para términos clave, emparejamiento para relacionar conceptos, ensayo para respuestas largas corregidas manualmente, preguntas numéricas para cálculos, preguntas calculadas con números aleatorios y ordenar elementos en secuencia."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_cuestionario_beneficios_pedagogicos",
+            "patterns": [
+                "¿Por qué usar cuestionarios en Moodle?",
+                "¿Qué ventajas pedagógicas tienen los cuestionarios?",
+                "¿Cómo ayudan los cuestionarios al aprendizaje?",
+                "¿Qué feedback se puede incluir en un cuestionario?"
+            ],
+            "responses": [
+                {
+                    "text": "Los cuestionarios permiten recuperar, reforzar y evaluar conocimientos específicos con feedback automático o diferido. Promueven el estudio progresivo, el desarrollo de habilidades comprensivas y el aprendizaje autorregulado. Se recomienda combinar tipos de preguntas y retroalimentación para maximizar su valor pedagógico."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_cuestionario_configuracion_tecnica",
+            "patterns": [
+                "¿Cómo configurar un cuestionario en Moodle?",
+                "¿Qué opciones técnicas hay para cuestionarios?",
+                "¿Para qué sirve el orden aleatorio de preguntas?",
+                "¿Cómo configurar intentos múltiples?"
+            ],
+            "responses": [
+                {
+                    "text": "En los cuestionarios se pueden configurar intentos múltiples para evaluación formativa, calificación automática para feedback inmediato, orden aleatorio de preguntas para evitar copias, inclusión de multimedia para enriquecer consignas y retroalimentación inmediata o diferida para reforzar conceptos o corregir errores."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_cuestionario_ejemplo",
+            "patterns": [
+                "Ejemplo de cuestionario para formación profesional",
+                "¿Cómo armar un cuestionario sobre derechos laborales?",
+                "Configuración de un cuestionario de empleabilidad",
+                "¿Qué tipos de preguntas incluir en cuestionario de FP?"
+            ],
+            "responses": [
+                {
+                    "text": "Ejemplo: cuestionario sobre derechos laborales con 10 preguntas que incluyen opción múltiple, emparejamiento y una pregunta de ensayo breve. Se permiten 2 intentos, retroalimentación inmediata por pregunta y un límite de tiempo de 15 minutos. El cuestionario cubre conceptos básicos, normativa y casos hipotéticos, promoviendo una evaluación completa y formativa."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_cuestionario_buenas_practicas",
+            "patterns": [
+                "¿Cuáles son buenas prácticas para cuestionarios?",
+                "¿Cómo mejorar un cuestionario en Moodle?",
+                "¿Por qué variar tipos de preguntas?",
+                "¿Qué importancia tiene la retroalimentación en cuestionarios?"
+            ],
+            "responses": [
+                {
+                    "text": "Se recomienda variar tipos de preguntas para estimular diferentes habilidades cognitivas, incluir retroalimentación para favorecer el aprendizaje autorregulado, usar cuestionarios de práctica para reducir ansiedad y aclarar criterios de calificación para mejorar la transparencia y confianza del estudiante."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_foro_general",
+            "patterns": [
+                "¿Qué es un foro en Moodle?",
+                "¿Para qué sirve el foro en Moodle?",
+                "Tipos de foro en Moodle",
+                "Foro estándar en Moodle",
+                "Características del foro",
+                "Cómo funciona un foro en Moodle"
+            ],
+            "responses": [
+                {
+                    "text": "El foro en Moodle es una herramienta de participación escrita donde los estudiantes pueden publicar mensajes, responder y debatir asincrónicamente."
+                },
+                {
+                    "text": "Permite diferentes tipos de foros para debates abiertos, debates simples, foros personales, pregunta y respuesta, y foros tipo blog."
+                },
+                {
+                    "text": "El foro fomenta el diálogo pedagógico, la construcción colectiva del conocimiento y el desarrollo de habilidades de argumentación y síntesis."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_foro_general_tipos",
+            "patterns": [
+                "¿Cuáles son los tipos de foro en Moodle?",
+                "Foro estándar, foro simple, foro pregunta y respuesta",
+                "Tipos de foro disponibles en Moodle",
+                "Diferencias entre tipos de foro"
+            ],
+            "responses": [
+                {
+                    "text": "Moodle ofrece varios tipos de foro: foro estándar para uso general, un único debate simple, cada persona plantea un tema, pregunta y respuesta, y foro tipo blog."
+                },
+                {
+                    "text": "Cada tipo se adapta a distintos fines comunicativos, evaluativos o reflexivos."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_foro_general_configuracion",
+            "patterns": [
+                "¿Cómo configurar un foro en Moodle?",
+                "Opciones técnicas para foros",
+                "Configuración técnica de foros",
+                "Buenas prácticas para configurar foros"
+            ],
+            "responses": [
+                {
+                    "text": "Se puede configurar el foro para que sea calificable, seleccionar el tipo de foro, habilitar adjuntar archivos, suscripción obligatoria y rastrear lectura."
+                },
+                {
+                    "text": "Estas opciones favorecen la evaluación de habilidades comunicativas, el seguimiento y la participación activa."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_foro_pregunta_respuesta",
+            "patterns": [
+                "¿Qué es el foro pregunta y respuesta?",
+                "Foro pregunta y respuesta en Moodle",
+                "Uso del foro pregunta y respuesta",
+                "Características del foro pregunta y respuesta"
+            ],
+            "responses": [
+                {
+                    "text": "El foro pregunta y respuesta es un tipo de foro donde los estudiantes solo ven las respuestas de otros después de participar, promoviendo reflexión individual previa al debate."
+                },
+                {
+                    "text": "Es útil para evaluaciones y debates más controlados."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_foro_general_uso_pedagogico",
+            "patterns": [
+                "¿Para qué sirve el foro en Moodle?",
+                "Importancia pedagógica del foro",
+                "Beneficios del foro para el aprendizaje",
+                "Qué aporta el foro en la enseñanza"
+            ],
+            "responses": [
+                {
+                    "text": "El foro fomenta el aprendizaje colaborativo, la visibilización de diferentes puntos de vista, el desarrollo de habilidades socioemocionales y la construcción de comunidad de aprendizaje."
+                },
+                {
+                    "text": "Es especialmente útil al inicio del curso o en trayectos largos para generar pensamiento crítico."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_foro_general_diseño_instruccional",
+            "patterns": [
+                "¿Cómo diseñar un foro en Moodle?",
+                "Consejos para crear un foro efectivo",
+                "Diseño instruccional de foros",
+                "Buenas prácticas para foros Moodle"
+            ],
+            "responses": [
+                {
+                    "text": "Es importante elaborar una consigna clara y contextualizada, definir el rol del docente, establecer criterios de calificación y fijar tiempos de apertura y cierre."
+                },
+                {
+                    "text": "El foro debe promover comunidad y pensamiento crítico, no solo ser un cumplimiento de tarea escrita."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_glosario",
+            "patterns": [
+                "¿Qué es el glosario en Moodle?",
+                "Para qué sirve el glosario en Moodle",
+                "Funcionalidad del glosario",
+                "Cómo funciona el glosario"
+            ],
+            "responses": [
+                {
+                    "text": "El glosario en Moodle permite crear una colección de términos y definiciones, que puede ser individual o colaborativa, incluyendo textos, imágenes, enlaces y archivos."
+                },
+                {
+                    "text": "Facilita la comprensión de conceptos clave y el vocabulario específico del curso."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_glosario_configuracion",
+            "patterns": [
+                "¿Cómo configurar un glosario en Moodle?",
+                "Opciones del glosario en Moodle",
+                "Funciones técnicas del glosario",
+                "Configuración técnica de glosarios"
+            ],
+            "responses": [
+                {
+                    "text": "El glosario permite entradas colaborativas, aprobación previa, adjuntar archivos, autovinculación automática y calificación manual o con rúbricas."
+                },
+                {
+                    "text": "Estas funciones mejoran la calidad y la utilidad pedagógica del glosario."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_glosario_uso_pedagogico",
+            "patterns": [
+                "¿Para qué sirve el glosario pedagógicamente?",
+                "Beneficios del glosario en educación",
+                "Pertinencia pedagógica del glosario",
+                "Valor educativo del glosario"
+            ],
+            "responses": [
+                {
+                    "text": "El glosario es valioso para trabajar terminología técnica, fortalecer el pensamiento conceptual y fomentar la colaboración entre estudiantes."
+                },
+                {
+                    "text": "También reduce la carga cognitiva al facilitar la consulta rápida de términos en contexto."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_glosario_diseño_instruccional",
+            "patterns": [
+                "¿Cómo diseñar actividades con glosario?",
+                "Buenas prácticas para usar glosarios",
+                "Consejos para crear un glosario efectivo",
+                "Diseño instruccional de glosarios"
+            ],
+            "responses": [
+                {
+                    "text": "Se recomienda proponer plantillas para entradas, incorporar el glosario como parte del trabajo práctico, generar glosarios temáticos y combinarlo con actividades de investigación o extracción de conceptos."
+                },
+                {
+                    "text": "Es útil calificar la calidad de las entradas para motivar y mejorar el aprendizaje."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_base_de_datos",
+            "patterns": [
+                "¿Qué es la actividad Base de datos?",
+                "¿Para qué sirve la actividad Base de datos?",
+                "¿Qué permite hacer la base de datos en la plataforma?"
+            ],
+            "responses": [
+                {
+                    "text": "La actividad Base de datos permite crear, compartir y consultar entradas organizadas bajo un mismo formato."
+                },
+                {
+                    "text": "Cada entrada se realiza a través de un formulario definido por quien diseña la actividad."
+                },
+                {
+                    "text": "Funciona como un catálogo colectivo o banco de contenidos con posibilidad de calificación y comentarios."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_base_de_datos_uso_pedagogico",
+            "patterns": [
+                "¿Qué enfoque pedagógico tiene la actividad Base de datos?",
+                "¿Qué competencias promueve la base de datos?",
+                "¿Cuál es el uso pedagógico de una base de datos?"
+            ],
+            "responses": [
+                {
+                    "text": "Permite trabajar desde un enfoque pedagógico constructivista y situado."
+                },
+                {
+                    "text": "Promueve la co-creación del conocimiento, habilidades de clasificación, síntesis, presentación y sistematización."
+                },
+                {
+                    "text": "También desarrolla competencias digitales vinculadas a la producción y publicación de información multiformato."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_base_de_datos_planificacion",
+            "patterns": [
+                "¿Qué tener en cuenta al planificar una base de datos educativa?",
+                "¿Cómo se planifica una base de datos?",
+                "¿Qué pasos debo seguir para planificarla bien?"
+            ],
+            "responses": [
+                {
+                    "text": "Es importante definir el propósito, diseñar cuidadosamente los campos del formulario y establecer criterios de evaluación."
+                },
+                {
+                    "text": "También es clave pensar cómo se va a recuperar la base de datos: visualización grupal, búsqueda por temas, exposición, etc."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_base_de_datos_configuracion",
+            "patterns": [
+                "¿Qué configuraciones técnicas tiene la base de datos?",
+                "¿Cómo se configura la actividad base de datos?",
+                "¿Qué funcionalidades técnicas ofrece?"
+            ],
+            "responses": [
+                {
+                    "text": "Se pueden definir campos personalizados, permitir carga de archivos, aplicar filtros, habilitar comentarios y calificaciones."
+                },
+                {
+                    "text": "Estas configuraciones permiten asegurar consistencia en los registros, promover feedback y evaluar la participación individual o grupal."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_base_de_datos_ejemplo",
+            "patterns": [
+                "¿Hay un ejemplo de base de datos en Formación Profesional?",
+                "¿Cómo se aplica una base de datos en Formación Profesional?",
+                "¿Qué ejemplo concreto se puede hacer con una base de datos?"
+            ],
+            "responses": [
+                {
+                    "text": "Sí, un ejemplo es el 'Banco de Recursos para Buscar Empleo', donde los estudiantes comparten recursos útiles para buscar trabajo."
+                },
+                {
+                    "text": "Incluye campos como nombre del recurso, descripción, tipo, link, imagen y recomendación personal."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_base_de_datos_buenas_practicas",
+            "patterns": [
+                "¿Cuáles son las buenas prácticas para una base de datos?",
+                "¿Qué prácticas se recomiendan para usar una base de datos?",
+                "¿Cómo mejorar el uso de la base de datos?"
+            ],
+            "responses": [
+                {
+                    "text": "• Diseñar campos simples y claros: Facilita la participación y coherencia.\n• Modelar con entradas de ejemplo: Reduce la inseguridad y errores.\n• Promover la lectura entre pares: Enriquece la visión y promueve diálogo.\n• Usar la base como insumo para actividades posteriores: Aumenta su relevancia y sentido."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_leccion",
+            "patterns": [
+                "¿Qué es una lección?",
+                "¿Qué hace la actividad lección?",
+                "¿Cómo funciona la lección?"
+            ],
+            "responses": [
+                {
+                    "text": "La actividad Lección permite crear una secuencia de páginas con contenido y preguntas que guían al estudiante de forma progresiva."
+                },
+                {
+                    "text": "Es un recurso interactivo que combina enseñanza, ejercitación y evaluación."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_leccion_utilidad",
+            "patterns": [
+                "¿Para qué sirve la lección?",
+                "¿Cuál es la finalidad de una lección?",
+                "¿Cuándo usar la actividad lección?"
+            ],
+            "responses": [
+                {
+                    "text": "Sirve para presentar contenidos paso a paso, adaptarse al ritmo del estudiante y ofrecer recorridos personalizados."
+                },
+                {
+                    "text": "Es ideal para diseñar experiencias formativas autodirigidas o crear clases alternativas."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_leccion_pertinencia_pedagogica",
+            "patterns": [
+                "¿Qué valor pedagógico tiene la lección?",
+                "¿Cuál es la pertinencia pedagógica de la lección?",
+                "¿Qué estrategias pedagógicas permite la lección?"
+            ],
+            "responses": [
+                {
+                    "text": "La lección facilita estrategias de aprendizaje adaptativo y evaluación formativa con retroalimentación inmediata."
+                },
+                {
+                    "text": "Permite un diseño instruccional orientado al proceso y a la personalización del aprendizaje."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_leccion_diseno_instruccional",
+            "patterns": [
+                "¿Cómo se diseña una lección?",
+                "¿Qué tener en cuenta al crear una lección?",
+                "¿Cómo planificar una lección?"
+            ],
+            "responses": [
+                {
+                    "text": "Planifica como una clase guiada, define objetivos, diseña preguntas con retroalimentación e incorpora navegación lógica."
+                },
+                {
+                    "text": "Incluye actividades integradoras y estructura el contenido para informar, ejercitar, reforzar o evaluar."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_leccion_configuracion_tecnica",
+            "patterns": [
+                "¿Qué configuraciones técnicas tiene la lección?",
+                "¿Qué opciones técnicas permite la lección?",
+                "¿Cómo se configura la lección?"
+            ],
+            "responses": [
+                {
+                    "text": "Permite páginas de contenido y de preguntas, saltos condicionales, control de intentos y calificación automática."
+                },
+                {
+                    "text": "Estas configuraciones se pueden usar para personalizar el recorrido del estudiante y registrar el avance."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_leccion_ejemplo",
+            "patterns": [
+                "¿Hay un ejemplo de lección aplicada?",
+                "¿Cómo se aplica la lección en un contexto real?",
+                "Dame un ejemplo de uso de la lección."
+            ],
+            "responses": [
+                {
+                    "text": "Un ejemplo es la lección 'Identificación de riesgos laborales', que combina páginas de contenido, preguntas y evaluación final."
+                },
+                {
+                    "text": "Incluye navegación secuencial, un intento permitido y calificación con puntaje total."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_leccion_buenas_practicas",
+            "patterns": [
+                "¿Qué buenas prácticas recomiendan para usar la lección?",
+                "¿Cómo mejorar el uso de la lección?",
+                "Sugerencias para usar la lección"
+            ],
+            "responses": [
+                {
+                    "text": "Se recomienda intercalar teoría y preguntas, usar saltos según respuestas y evitar lecciones demasiado extensas."
+                },
+                {
+                    "text": "Estas prácticas ayudan a mantener la atención y mejorar el aprendizaje."
+                }
+            ]
+        },
+        {
+            "tag": "actividad_finalizacion",
+            "patterns":[
+                "Configurar estado de finalización de actividades",
+                "Ver informe de finalización de actividad"
+            ],
+            "responses":[
+                {
+                    "text": "Configurar estado de finalización de actividades\n\nEn nuestro curso presionar el botón «Más» y luego «Finalización del curso». Luego seleccionar «Condición: Finalización de actividades» y seleccionar la actividad. Por último «Guardar cambios».",
+                    "video": "https://youtu.be/o4ywbgS4D8E"
+                },
+                {
+                    "text": "Ver informe de finalización de actividad\n\nDentro del curso presionar «Más», a continuación «Informes» y luego seleccionar finalización de la actividad. Aparecerá el reporte de finalización de actividad que puede ser filtrado por tipo de actividad y orden en el curso. Se puede observar quiénes y qué actividades han completado.",
+                    "video": "https://youtu.be/U_NbL8e5V4M"
+                }
+            ]
+        },
+        {
+            "tag": "curso_finalizacion",
+            "patterns":[
+                "Finalización de curso a través de finalización de actividad"
+            ],
+            "responses":[
+                {
+                    "text": "Finalización de curso a través de finalización de actividad\n\nEl rastreo de finalización es una función que permite registrar automáticamente de forma manual cuando un estudiante ha completado una actividad o recurso según criterios definidos por un docente. Se complementa con otras actividades como la barra o bloque de progreso, los informes de finalización y los criterios de finalización curso, facilitando el seguimiento del avance y la gestión de rutas de aprendizaje.",
+                    "video": "https://youtu.be/ONCTP2PfdgQ"
+                }
+            ]
+        },
+        {
+            "tag": "importar_recursos_actividades",
+            "patterns":[
+                "Importar recursos y actividades"
+            ],
+            "responses":[
+                {
+                    "text": "Importar recursos y actividades\n\nDentro del curso de destino, en la opción «Más», seleccionar «Reutilización de curso», luego desplegar en «Importar» y ahí seleccionamos un curso de origen e ingresar en nombre corto exacto.\nSeleccionar y le presionar «Continuar». Luego seleccionar las actividades a incluir en la importación y presionar «Siguiente», para finalizar presionar «Continuar».",
+                    "video": "https://youtu.be/xI0l0GgnxuU"
+                }
+            ]
+        },
+        {
+            "tag": "grupos_estudiantes",
+            "patterns":[
+                "Crear un grupo y eliminar grupos",
+                "Añadir estudiante a un grupo",
+                "Importar grupo"
+            ],
+            "responses":[
+                {
+                    "text": "Crear un grupo y eliminar grupos\n\nDentro del aula seleccionar participantes, desplegar la opción de matriculación y seleccionar «Grupos», a continuación «Crear grupo». Dar nombre al grupo, por ejemplo, comisión 10 y guardar los cambios. Al seleccionar un grupo, éste se puede eliminar.",
+                    "video": "https://youtu.be/NofDOxTKgfg"
+                },
+                {
+                    "text": "Añadir estudiante a un grupo\n\nSeleccionar el grupo y luego «Agregar/quitar usuarios». En el lado derecho verás los miembros del grupo y en el izquierdo los miembros potenciales, es decir, los participantes del aula, que se pueden agregar al grupo.",
+                    "video": "https://youtu.be/KcXkPlCulVY"
+                },
+                {
+                    "text": "Importar grupo\n\nDentro del aula, seleccionar «Participantes», luego «Grupos». Presionar «Importar grupos» y se desplegará una pantalla para importar un archivo en formato CSV. Elegir en delimitador CSV la opción de la coma e inmediatamente importar los grupos.\nAparecerá una vista previa con una descripción en verde de los grupos añadidos con éxito, finalizar presionando «Continuar».",
+                    "video": "https://youtu.be/29x3Val7oIs"
+                }
+            ]
+        },
+        {
+            "tag": "matriculacion",
+            "patterns":[
+                "Creación de matriculación manual por contraseña",
+                "Automatriculación",
+                "Matriculación manual",
+                "Matriculación masiva",
+                "Matriculación de estudiantes"
+            ],
+            "responses":[
+                {
+                    "text": "Creación de matriculación manual por contraseña\n\nLa matriculación manual por contraseña se refiere a la posibilidad de que los estudiantes se inscriban en un curso utilizando una clave de matriculación definida por el docente o administrador.",
+                    "video": "https://youtu.be/QxorcUJd2kY"
+                },
+                {
+                    "text": "Matricular estudiantes en un curso de forma masiva\n\nAntes debemos tener en cuenta solicitas a Sistemas la lista de estudiantes, ya que la extraen desde la base de datos del sistema SIU. El archivo generado contiene usuarios que ya están creados en Moodle.\n1 - Acceder a «Administración del sitio»\n2 - Seleccionar usuarios\n3 - Seleccionar «Subir usuarios»\n4 - Cargar el archivo CSV y seleccionar la opción «Separador CSV». Elegimos la coma, presionar «Subir usuarios». En tipo de subida elegimos actualizar solo usuarios existentes. Luego en forzar contraseña cliqueamos en ninguno.\n5 - Seleccionar «Subir usuarios» para finalizar.",
+                    "video": "https://youtu.be/rRs-1Zay1Og"
+                }
+            ]
+        },
+        {
+            "tag": "plugins_utilizados",
+            "patterns": [
+                "¿Cuáles son los plugins más utilizados en Moodle?",
+                "Mencioname algunos plugins recomendados para Moodle",
+                "¿Qué plugins debería usar en Moodle?"
+            ],
+            "responses": [
+                {
+                    "text": "Algunos de los plugins más utilizados en Moodle son H5P, PDF embebido, Interactive Content Block, Checklist, Scheduler, Custom Certificate, Game y Attendance."
+                },
+                {
+                    "text": "Puedes utilizar plugins como H5P para contenido interactivo, o Checklist para que los estudiantes marquen tareas completadas."
+                }
+            ]
+        },
+        {
+            "tag": "plugin_h5p",
+            "patterns": [
+                "¿Para qué sirve el plugin H5P?",
+                "Contame más sobre H5P",
+                "¿Qué hace H5P en Moodle?"
+            ],
+            "responses": [
+                {
+                    "text": "H5P permite crear contenido interactivo como videos con preguntas, presentaciones y actividades de arrastrar y soltar."
+                },
+                {
+                    "text": "Con H5P puedes mejorar el aprendizaje activo y brindar feedback inmediato a los estudiantes."
+                }
+            ]
+        },
+        {
+            "tag": "plugin_pdf",
+            "patterns": [
+                "¿Qué es el plugin PDF embebido?",
+                "¿Cómo funciona PDF.js en Moodle?",
+                "¿Para qué sirve incrustar PDF en Moodle?"
+            ],
+            "responses": [
+                {
+                    "text": "PDF embebido permite visualizar archivos PDF directamente en el curso sin necesidad de descargarlos."
+                },
+                {
+                    "text": "Este plugin facilita el acceso rápido a documentos y mejora la organización visual."
+                }
+            ]
+        },
+        {
+            "tag": "plugin_scheduler",
+            "patterns": [
+                "¿Cómo funciona el plugin Scheduler?",
+                "¿Qué hace el turnero en Moodle?",
+                "¿Puedo usar Moodle para asignar entrevistas?"
+            ],
+            "responses": [
+                {
+                    "text": "Scheduler permite al docente ofrecer turnos para entrevistas o tutorías, y los estudiantes pueden elegir día y hora."
+                },
+                {
+                    "text": "Este plugin mejora la organización y la atención individualizada."
+                }
+            ]
+        },
+        {
+            "tag": "plugin_game",
+            "patterns": [
+                "¿Qué es el plugin Game en Moodle?",
+                "¿Cómo puedo convertir cuestionarios en juegos?",
+                "¿Qué juegos se pueden hacer en Moodle?"
+            ],
+            "responses": [
+                {
+                    "text": "El plugin Game convierte cuestionarios y glosarios en juegos como crucigramas, millonario y ahorcado."
+                },
+                {
+                    "text": "Es ideal para motivar a los estudiantes mediante el aprendizaje lúdico."
+                }
+            ]
+        },
+        {
+            "tag": "evaluacion_docente",
+            "patterns": [
+                "¿Qué actividades ayudan a evaluar el proceso de aprendizaje?",
+                "¿Cómo puedo evaluar mejor a mis estudiantes?",
+                "¿Qué me recomendás para la evaluación en Moodle?"
+            ],
+            "responses": [
+                {
+                    "text": "Puedes usar actividades como cuestionarios, checklist y foros para evaluar el proceso de aprendizaje."
+                },
+                {
+                    "text": "La evaluación continua puede lograrse combinando recursos interactivos con actividades reflexivas."
+                }
+            ]
+        },
+        {
+            "tag": "reflexion_autonomia",
+            "patterns": [
+                "¿Qué recursos favorecen el aprendizaje autónomo?",
+                "¿Cómo puedo promover la autonomía en Moodle?",
+                "¿Qué me sugerís para que los alumnos aprendan solos?"
+            ],
+            "responses": [
+                {
+                    "text": "Recursos como el Libro, H5P y el Checklist favorecen el aprendizaje autónomo."
+                },
+                {
+                    "text": "Puedes combinar contenido bien organizado con actividades que los estudiantes gestionen por sí mismos."
+                }
+            ]
+        },
+        {
+            "tag": "desconocido",
+            "patterns": [
+                "No entiendo esta pregunta",
+                "¿Qué significa esto?",
+                "No sé cómo responder a eso",
+                "Eso no está relacionado con Moodle",
+                "¿Qué plugin es ese?",
+                "¿Podés repetirlo de otra forma?"
+            ],
+            "responses": [
+                {
+                    "text": "Lo siento, no tengo información sobre eso."
+                },
+                {
+                    "text": "No entiendo completamente tu pregunta, ¿podés reformularla?"
+                },
+                {
+                    "text": "Ese tema no está contemplado actualmente en esta herramienta."
+                },
+                {
+                    "text": "Podés consultar con un docente o administrador del sistema para más detalles."
+                },
+                {
+                    "text": "No tengo una respuesta para eso por ahora, pero puedo ayudarte con Moodle y sus plugins más comunes."
+                }
+            ]
+        },
+        {
+            "tag": "que_es_un_archivo_csv",
+            "patterns": [
+                "¿Qué es un archivo CSV?",
+                "¿Qué es un CSV?",
+                "¿Que quiere decir CSV?",
+                "Definición de CSV",
+                "¿Cómo es un archivo CSV?",
+                "Estructura o formato de un archivo CSV"
+            ],
+            "responses": [
+                {
+                    "text": "Un archivo CSV (abreviatura de \"Comma Separated Values\", o \"Valores Separados por Comas\") es un formato de archivo de texto que utiliza comas para separar los valores o campos de datos en cada fila. Este formato es simple y ampliamente compatible, lo que lo hace ideal para almacenar, compartir, importar y exportar datos entre diferentes aplicaciones de software."
+                },
+                {
+                    "text": "Es un archivo de texto plano, generado desde Excel o LibreOffice, donde cada fila representa un curso nuevo, y cada columna contiene los datos requeridos para crearlo."
+                },
+                {
+                    "text": "Estructura básica del archivo CSV:\n\nshortname,fullname,category,visible,format\nEDU1,Educación para el trabajo 1,FoPro,1,topics\nEDU2,Educación para el trabajo 2,FoPro,1,topics\nINF1,Informática básica 1,FoPro,1,tiles\n\n\t• shortname: nombre corto (único)\n\t• fullname: nombre completo del curso\n\t• category: número ID\n\t• visible: 1 (visible) o 0 (oculto)\n\t• format: formato de curso (topics, tiles, tabs, etc.)\n"
+                }
+            ]
+        },
+        {
+            "tag": "crear_csv",
+            "patterns": [
+                "¿Cómo creo un archivo CSV?",
+                "Quiero hacer un archivo CSV",
+                "¿Qué programa uso para hacer un CSV?",
+                "¿Cómo se hace un CSV?",
+                "Necesito generar un archivo CSV",
+                "Crear archivo CSV paso a paso"
+            ],
+            "responses": [
+                {
+                    "text": "Podés crear un archivo CSV usando programas como Microsoft Excel, Google Sheets o cualquier editor de texto como Bloc de notas."
+                },
+                {
+                    "text": "Un archivo CSV se puede generar con Excel, Google Sheets o incluso escribiéndolo manualmente en un editor de texto."
+                },
+                {
+                    "text": "Abrí Excel o Google Sheets, escribí los datos en columnas y filas, y luego elegí la opción 'Guardar como' o 'Descargar' en formato CSV."
+                },
+                {
+                    "text": "Escribí los datos separados por comas (,) y guardá el archivo con la extensión .csv. Por ejemplo: nombre,edad,correo\\nJuan,25,juan@mail.com"
+                }
+            ]
+        },
+        {
+            "tag": "herramientas_csv",
+            "patterns": [
+                "¿Qué herramientas sirven para crear CSV?",
+                "¿Con qué programa hago un archivo CSV?",
+                "Aplicaciones para hacer CSV",
+                "¿Puedo usar Excel para un CSV?",
+                "¿Google Sheets sirve para CSV?",
+                "¿Se puede hacer CSV en un bloc de notas?"
+            ],
+            "responses": [
+                {
+                    "text": "Sí, podés usar Excel, Google Sheets o incluso un editor de texto como Bloc de notas o Notepad++ para crear archivos CSV."
+                },
+                {
+                    "text": "Las herramientas más comunes para crear archivos CSV son Excel, Google Sheets y editores de texto como Bloc de notas o VS Code."
+                },
+                {
+                    "text": "Con Excel o Google Sheets, simplemente cargá los datos en filas y columnas, luego guardá o exportá como CSV."
+                },
+                {
+                    "text": "También podés crear un CSV manualmente en un editor de texto, separando los valores con comas y guardando el archivo con la extensión .csv"
+                }
+            ]
+        },
+        {
+            "tag": "cargar_notas_calificaciones",
+            "patterns": [
+                "¿Cómo cargo las calificaciones?",
+                "Subir notas al sistema",
+                "Cargar reporte de calificaciones",
+                "¿Dónde subo las notas en Moodle?"
+            ],
+            "responses": [
+                {
+                    "text": "Ve al libro de calificaciones, selecciona 'Importar', elige el formato y carga el archivo."
+                },
+                {
+                    "text": "Las calificaciones se pueden cargar desde el libro de calificaciones o directamente en cada actividad."
+                }
+            ]
+        },
+        {
+            "tag": "ver_reporte",
+            "patterns": [
+                "¿Dónde veo los reportes de actividades?",
+                "Ver progreso de los estudiantes",
+                "Reportes de participación",
+                "Revisar estadísticas de uso"
+            ],
+            "responses": [
+                {
+                    "text": "Puedes ver los reportes desde la sección de 'Informes' dentro del curso."
+                },
+                {
+                    "text": "En cada actividad también puedes ver reportes específicos como intentos, calificaciones y tiempos."
+                }
+            ]
+        },
+        {
+            "tag": "subir_archivo",
+            "patterns": [
+                "¿Cómo subo un archivo?",
+                "Cargar PDF en Moodle",
+                "Añadir material de lectura",
+                "Subir documentos para los estudiantes"
+            ],
+            "responses": [
+                {
+                    "text": "Activa edición, haz clic en 'Añadir una actividad o recurso', selecciona 'Archivo', sube el documento y guarda los cambios."
+                },
+                {
+                    "text": "Puedes subir archivos desde la opción 'Archivo' o 'Etiqueta', arrastrando el documento o seleccionándolo desde tu equipo."
+                }
+            ]
+        },
+        {
+            "tag": "exportar_calificaciones",
+            "patterns": [
+                "¿Cómo exporto las calificaciones?",
+                "Descargar reporte de notas",
+                "Exportar notas a Excel",
+                "Quiero guardar las calificaciones"
+            ],
+            "responses": [
+                {
+                    "text": "Ve al libro de calificaciones, haz clic en 'Exportar' y elige el formato (Excel, CSV, etc.) para descargar las notas."
+                },
+                {
+                    "text": "Las calificaciones se pueden exportar desde la pestaña 'Exportar' del calificador, en varios formatos disponibles."
+                }
+            ]
+        },
+        {
+            "tag": "acceso_moodle",
+            "patterns": [
+                "Acceso al campus",
+                "¿Cómo acceder al campus virtual?",
+                "Acceder a Aulas Virtuales"
+            ],
+            "responses": [
+                {
+                    "text": "Acceso al campus\n\n1 - Ingresar a www.aulasvirtuales.edu.ar.\n2 - Ingresar nombre de usuario y contraseña. En el caso de nombre de usuario, tu DNI, todo junto y sin puntos, y la contraseña que fue informada por correo electrónico.\n3 - Presionar acceder.\n\nTu nombre de usuario, que es el número de DNI sin puntos y tu contraseña que fue informada previamente a tu correo electrónico. ",
+                    "video": "https://youtu.be/gXZf2TizWq4"
+                }
+            ]
+        },
+        {
+            "tag": "problemas_acceso",
+            "patterns": [
+                "No puedo entrar a Moodle",
+                "Me da error al iniciar sesión",
+                "Problemas para acceder",
+                "No reconoce mi usuario",
+                "Recuperar contraseña",
+                "Olvidé mi contraseña"
+
+            ],
+            "responses": [
+                {
+                    "text": "Verifica tu usuario y contraseña. Si el problema persiste, contacta al soporte técnico."
+                },
+                {
+                    "text": "Es posible que tu cuenta esté inactiva. Intenta recuperar la contraseña o comunícate con el administrador."
+                },
+                {
+                    "text": "Recuperar contraseña\n\n1 - Ingresá a la plataforma.\n2 - En la pantalla de inicio de sesión hacé clic en el enlace que dice «¿Olvidó su contraseña?».\n3 - En la siguiente pantalla vas a ver dos campos: nombre de usuario, dirección de correo electrónico. Importante, no es necesario completar ambos campos, solo uno. Si elegís nombre de usuario, ingresa a tu número de DNI sin puntos. Si elegís correo electrónico, escribí el mismo mail que usaste al inscribirte.\n4 - Hacé clic en el botón buscar.\n5 - Luego presionar «Continuar», recibirás un mail con un enlace para restablecer tu contraseña. Si no lo ves, revisa también la carpeta de spam o correo no deseado.\n6 - Ingresa al enlace y crea tu nueva contraseña.",
+                    "video": "https://www.youtube.com/watch?v=UUN951usDoI"
+                }
+
+            ]
+        },
+        {
+            "tag": "perfil_personal",
+            "patterns":[
+                "Editar perfil",
+                "Editar información personal",
+                "Ver información personal"
+            ],
+            "responses":[
+                {
+                    "text": "Editar perfil\n\nEn la esquina superior derecha de la pantalla se encuentra un menú con el acceso al perfil.\nAl ingresar verás datos personales y de matriculación a cursos.\bSeleccionar «Editar perfil», modificar los datos necesarios y luego seleccionar «Actualizar información personal» para guardar los cambios.",
+                    "video": "https://youtu.be/gwGTt19yjOQ"
+                }
+            ]
+        },
+        {
+            "tag": "acceso_cursos",
+            "patterns":[
+                "Acceso a cursos",
+                "Ver cursos",
+                "Ingresar a cursos"
+            ],
+            "responses":[
+                {
+                    "text": "Acceso a cursos\n\nLa sección mis cursos nos indica todos los cursos a los cuales ya estamos matriculados, es decir, solamente aquellos a los que vamos a tener acceso. Posse un filtro para busca algún curso en particular de forma rápida.",
+                    "video": "https://youtu.be/KzBL7UtI444"
+                }
+            ]
+        },
+        {
+            "tag": "soporte_tecnico",
+            "patterns": [
+                "¿A quién contacto por ayuda?",
+                "Necesito soporte",
+                "Tengo un problema con Moodle",
+                "¿Dónde puedo pedir asistencia técnica?"
+            ],
+            "responses": [
+                {
+                    "text": "Puedes contactar al equipo de soporte técnico de tu institución o escribir al correo asignado."
+                },
+                {
+                    "text": "Para soporte, consulta con el administrador del sistema o revisa la sección de ayuda en Moodle."
+                }
+            ]
+        }
+    ]
+}

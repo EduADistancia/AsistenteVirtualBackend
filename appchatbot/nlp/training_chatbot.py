@@ -14,7 +14,7 @@ from tensorflow.keras.optimizers.schedules import ExponentialDecay
 
 nltk.download('punkt_tab')
 
-data_file = open("./intents.json", "r", encoding="utf-8").read()
+data_file = open("./intents_updated.json", "r", encoding="utf-8").read()
 intents = json.loads(data_file)
 
 lemmatizer = WordNetLemmatizer()
