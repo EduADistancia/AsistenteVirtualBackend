@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #153244;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .question {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #eef2f7;
+            border-left: 4px solid #8de2d6;
+        }
+        .response {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #e7f7e7;
+            border-left: 4px solid #28a745;
+        }
+        .footer {
+            margin-top: 20px;
+            color: #153244;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <p>Hola,</p>
+    <p>A tu consulta del <strong>{{ created_at }}</strong>:</p>
+    <div class="question">
+        "{{ textQuestion }}"
+    </div>
+    <p>Respondemos:</p>
+    <div class="response">
+        {{ textResponse }}
+    </div>
+    <div class="footer">
+        <p>Atentamente,</p>
+        <p>Equipo de Educación a Distancia</p>
+        <p>Agencia de Habilidades Para el Futuro</p>
+        <p>Ministerio de Educación e Innovación - GCBA</p>
+        <img src="cid:signature_image" alt="Firma" style="height:40px;">
+    </div>
+</div>
+</body>
+</html>

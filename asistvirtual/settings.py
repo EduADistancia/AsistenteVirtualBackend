@@ -179,7 +179,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "cristian.toledo@bue.edu.ar"
 EMAIL_HOST_PASSWORD = "xjke wffv prjo khqt"
-DEFAULT_FROM_EMAIL = "Soporte <cristian.toledo@bue.edu.ar>"
+DEFAULT_FROM_EMAIL = "Educación a Distancia - Soporte <cristian.toledo@bue.edu.ar>"
 
-CELERY_BROKER_URL = "redis://localhost:6379/0"  # o RabbitMQ
-CELERY_RESULT_BACKEND = "redis://localhost:6379/0"
+CELERY_BROKER_URL = "redis://redis:6379/0"
+CELERY_RESULT_BACKEND = "redis://redis:6379/0"
