@@ -19,6 +19,9 @@ class Costumer(models.Model):
     class Meta:
         verbose_name = "Usuario Moodle"
         verbose_name_plural = "Usuarios Moodle"
+        
+    def __str__(self):
+        return f"{self.rol}"
 
 class Question(models.Model):
     customer = models.ForeignKey(Costumer, on_delete=models.CASCADE, related_name="questions")
