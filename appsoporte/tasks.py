@@ -2,12 +2,27 @@ import os
 
 from celery import shared_task
 from django.core.mail import EmailMultiAlternatives
+from django.core.mail.backends.smtp import EmailBackend
 from django.template.loader import render_to_string
 from django.conf import settings
 from django.utils import timezone
 from email.mime.image import MIMEImage
 
+from appconfig.models import SupportEmailConfig
 from .models import Response
+
+
+def get_support_email():
+    config = SupportEmailConfig.objects.filter(active=True).first()
+    
+    return {
+        "host": config.host,
+        "port": config.port,
+        "use_tls": config.use_tls,
+        "email": config.email,
+        "password": config.password,
+        "from_email": f"{config.from_email} <{config.email}>",
+    }
 
 @shared_task(bind=True, max_retries=3)
 def send_response_email(self, response_id):
@@ -35,10 +50,12 @@ def send_response_email(self, response_id):
             f"Atentamente, el equipo de Educación a Distancia - AHPF - ME."
         ) 
 
+        smtp_config = get_support_email()
+        
         email = EmailMultiAlternatives(
             subject=f"Respuesta a tu consulta",
             body=text_content,
-            from_email=settings.DEFAULT_FROM_EMAIL,
+            from_email=smtp_config["from_email"],
             to=[recipient],
         )
         email.attach_alternative(html_content, "text/html")
@@ -50,7 +67,16 @@ def send_response_email(self, response_id):
             img.add_header('Content-Disposition', 'inline', filename="FirmaBA.jpg")
             email.attach(img)
         
-        email.send(fail_silently=False)
+        email.connection = EmailBackend(
+            host=smtp_config["host"],
+            port=smtp_config["port"],
+            username=smtp_config["email"],
+            password=smtp_config["password"],
+            use_tls=smtp_config["use_tls"],
+            fail_silently=False,
+        )
+        
+        email.send()
 
         response.sent_ok = True
         response.error_log = None

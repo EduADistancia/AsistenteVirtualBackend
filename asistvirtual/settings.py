@@ -56,10 +56,12 @@ INSTALLED_APPS = [
     'appchatbot.apps.AppchatbotConfig',
     'appusuarios.apps.AppusuariosConfig',
     'appcomentarios.apps.AppcomentariosConfig',
-    'appsoporte.apps.AppsoporteConfig'
+    'appsoporte.apps.AppsoporteConfig',
+    'appconfig.apps.AppconfigConfig'
 ]
 
 MIDDLEWARE = [
+    "appconfig.middleware.DynamicCorsMiddleware",
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -149,7 +151,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS
-CORS_ALLOWED_ORIGINS = os.getenv("CORS_ALLOWED_ORIGINS").split()
+CORS_ALLOWED_ORIGINS = []
 
 # Modelo de autenticación customizado
 AUTH_USER_MODEL = 'appusuarios.User'
@@ -174,12 +176,6 @@ REST_FRAMEWORK = {
 
 # CELERY
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = "cristian.toledo@bue.edu.ar"
-EMAIL_HOST_PASSWORD = "xjke wffv prjo khqt"
-DEFAULT_FROM_EMAIL = "Educación a Distancia - Soporte <cristian.toledo@bue.edu.ar>"
 
 CELERY_BROKER_URL = "redis://redis:6379/0"
 CELERY_RESULT_BACKEND = "redis://redis:6379/0"
