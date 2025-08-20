@@ -157,7 +157,7 @@ CORS_ALLOWED_ORIGINS = []
 AUTH_USER_MODEL = 'appusuarios.User'
 
 LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/admin/login/'
+LOGOUT_REDIRECT_URL = '/login/'
 
 # Admin-interface
 X_FRAME_OPTIONS = "SAMEORIGIN"
