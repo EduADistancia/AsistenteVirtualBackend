@@ -14,10 +14,10 @@ import os
 from pathlib import Path
 
 ### sólo DEV ###
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-dotenv_path = os.path.join("../", ".env")
-load_dotenv(dotenv_path=dotenv_path, override=True)
+# dotenv_path = os.path.join("../", ".env")
+# load_dotenv(dotenv_path=dotenv_path, override=True)
 ### /sólo DEV ##
 
 
@@ -32,7 +32,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False #True
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
 
