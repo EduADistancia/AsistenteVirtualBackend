@@ -39,7 +39,7 @@ def bags_of_words(sentence):
 def predict_class(sentence):
     bow = bags_of_words(sentence)
     res = model.predict(np.array([bow]))[0]
-    ERROR_THRESHOLD = 0.25
+    ERROR_THRESHOLD = 0.5
     results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
     results.sort(key=lambda x: x[1], reverse=True)
     return_list = []
@@ -68,11 +68,7 @@ def get_related_intents_by_similarity(current_tag, current_patterns, intents_jso
 
 def get_response_with_related_intents(intents_list, intents_json):
     if not intents_list:
-        # return {
-        #     "response": "Lo siento, no entendí tu mensaje.",
-        #     "related_intents": []
-        # }
-        
+
         return {
             "text": "Lo siento, no entendí tu mensaje.",
             "video": None,
@@ -88,10 +84,6 @@ def get_response_with_related_intents(intents_list, intents_json):
             related_intents = get_related_intents_by_similarity(
                 tag, intent['patterns'], intents_json
             )
-            # return {
-            #     "response": response,
-            #     "related_intents": related_intents
-            # }
             
             return {
                 "text": response["text"],
@@ -99,11 +91,6 @@ def get_response_with_related_intents(intents_list, intents_json):
                 "related_intents": related_intents
             }
 
-    # return {
-    #     "response": "Lo siento, no entendí tu mensaje.",
-    #     "related_intents": []
-    # }
-    
     return {
         "text": "Lo siento, no entendí tu mensaje.",
         "video": None,

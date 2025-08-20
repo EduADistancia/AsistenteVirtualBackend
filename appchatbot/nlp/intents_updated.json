@@ -1147,7 +1147,8 @@
             "tag": "actividad_finalizacion",
             "patterns":[
                 "Configurar estado de finalización de actividades",
-                "Ver informe de finalización de actividad"
+                "Ver informe de finalización de actividad",
+                "Finalización de actividades"
             ],
             "responses":[
                 {
@@ -1163,6 +1164,14 @@
         {
             "tag": "curso_finalizacion",
             "patterns":[
+                "Finalización de curso",
+                "Cómo finalizar un curso en Moodle",
+                "Configurar finalización del curso",
+                "Activar criterios de finalización",
+                "Finalización de actividades",
+                "Criterios de finalización de estudiantes",
+                "Marcar curso como finalizado",
+                "Condiciones para finalizar curso",
                 "Finalización de curso a través de finalización de actividad"
             ],
             "responses":[
@@ -1187,8 +1196,17 @@
         {
             "tag": "grupos_estudiantes",
             "patterns":[
+                "Crear grupos",
+                "Cómo crear un grupo",
+                "Manejar grupos en Moodle",
+                "Agrupar estudiantes",
                 "Crear un grupo y eliminar grupos",
                 "Añadir estudiante a un grupo",
+                "Quitar usuario de un grupo",
+                "Eliminar un grupo en Moodle",
+                "Asignar usuarios a grupos",
+                "Poner un alumno dentro de un grupo",
+                "Importar grupos desde archivo",
                 "Importar grupo"
             ],
             "responses":[
@@ -1209,6 +1227,14 @@
         {
             "tag": "matriculacion",
             "patterns":[
+                "Matricular a un estudiante en un curso",
+                "Inscribir alumno",
+                "Dar de alta un usuario en el curso",
+                "Añadir participante",
+                "Matriculación manual en Moodle",
+                "Hacer la matrícula de un alumno",
+                "Asignar rol de estudiante en un curso",
+                "Inscribir usuario en un aula virtual",
                 "Creación de matriculación manual por contraseña",
                 "Automatriculación",
                 "Matriculación manual",
