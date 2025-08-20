@@ -84,7 +84,7 @@ CREATE TABLE `admin_interface_theme` (
   `collapsible_tabular_inlines_collapsed` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `admin_interface_theme_name_30bda70f_uniq` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -119,7 +119,7 @@ CREATE TABLE `appchatbot_consultachatbot` (
   PRIMARY KEY (`id`),
   KEY `appchatbot_consultac_user_id_id_95790923_fk_appsoport` (`user_id_id`),
   CONSTRAINT `appchatbot_consultac_user_id_id_95790923_fk_appsoport` FOREIGN KEY (`user_id_id`) REFERENCES `appsoporte_costumer` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=157 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=157;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
@@ -136,7 +136,7 @@ CREATE TABLE `appcomentarios_comment` (
   `comment` longtext NOT NULL,
   `user_moodle` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
@@ -152,7 +152,7 @@ CREATE TABLE `appconfig_allowedorigincors` (
   `origin` varchar(200) NOT NULL,
   `active` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -185,7 +185,7 @@ CREATE TABLE `appconfig_supportemailconfig` (
   `port` int(11) NOT NULL,
   `use_tls` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -216,7 +216,7 @@ CREATE TABLE `appsoporte_costumer` (
   PRIMARY KEY (`id`),
   KEY `appsoporte_costumer_rol_id_8e9756e6_fk_appsoporte_rolcostumer_id` (`rol_id`),
   CONSTRAINT `appsoporte_costumer_rol_id_8e9756e6_fk_appsoporte_rolcostumer_id` FOREIGN KEY (`rol_id`) REFERENCES `appsoporte_rolcostumer` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=79;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -325,7 +325,7 @@ CREATE TABLE `appsoporte_question` (
   PRIMARY KEY (`id`),
   KEY `appsoporte_question_customer_id_3aa5bcf8_fk_appsoport` (`customer_id`),
   CONSTRAINT `appsoporte_question_customer_id_3aa5bcf8_fk_appsoport` FOREIGN KEY (`customer_id`) REFERENCES `appsoporte_costumer` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
@@ -349,7 +349,7 @@ CREATE TABLE `appsoporte_response` (
   KEY `appsoporte_response_answered_by_id_2de94abe_fk_appusuari` (`answered_by_id`),
   CONSTRAINT `appsoporte_response_answered_by_id_2de94abe_fk_appusuari` FOREIGN KEY (`answered_by_id`) REFERENCES `appusuarios_user` (`id`),
   CONSTRAINT `appsoporte_response_question_id_a503d3fa_fk_appsoport` FOREIGN KEY (`question_id`) REFERENCES `appsoporte_question` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
@@ -365,7 +365,7 @@ CREATE TABLE `appsoporte_rolcostumer` (
   `rol` varchar(30) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `rol` (`rol`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -406,7 +406,7 @@ CREATE TABLE `appusuarios_user` (
   `date_created` datetime(6) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -440,7 +440,7 @@ CREATE TABLE `appusuarios_user_groups` (
   KEY `appusuarios_user_groups_group_id_11c5ac18_fk_auth_group_id` (`group_id`),
   CONSTRAINT `appusuarios_user_groups_group_id_11c5ac18_fk_auth_group_id` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`),
   CONSTRAINT `appusuarios_user_groups_user_id_ffb1c0c8_fk_appusuarios_user_id` FOREIGN KEY (`user_id`) REFERENCES `appusuarios_user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -472,7 +472,7 @@ CREATE TABLE `appusuarios_user_user_permissions` (
   KEY `appusuarios_user_use_permission_id_608be307_fk_auth_perm` (`permission_id`),
   CONSTRAINT `appusuarios_user_use_permission_id_608be307_fk_auth_perm` FOREIGN KEY (`permission_id`) REFERENCES `auth_permission` (`id`),
   CONSTRAINT `appusuarios_user_use_user_id_21c1d6ca_fk_appusuari` FOREIGN KEY (`user_id`) REFERENCES `appusuarios_user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -498,7 +498,7 @@ CREATE TABLE `auth_group` (
   `name` varchar(150) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -530,7 +530,7 @@ CREATE TABLE `auth_group_permissions` (
   KEY `auth_group_permissio_permission_id_84c5c92e_fk_auth_perm` (`permission_id`),
   CONSTRAINT `auth_group_permissio_permission_id_84c5c92e_fk_auth_perm` FOREIGN KEY (`permission_id`) REFERENCES `auth_permission` (`id`),
   CONSTRAINT `auth_group_permissions_group_id_b120cbf9_fk_auth_group_id` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -569,7 +569,7 @@ CREATE TABLE `auth_permission` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `auth_permission_content_type_id_codename_01ab375a_uniq` (`content_type_id`,`codename`),
   CONSTRAINT `auth_permission_content_type_id_2f476e4b_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=69;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -666,7 +666,7 @@ CREATE TABLE `authtoken_token` (
   PRIMARY KEY (`key`),
   UNIQUE KEY `user_id` (`user_id`),
   CONSTRAINT `authtoken_token_user_id_35299eff_fk_appusuarios_user_id` FOREIGN KEY (`user_id`) REFERENCES `appusuarios_user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -703,7 +703,7 @@ CREATE TABLE `django_admin_log` (
   KEY `django_admin_log_user_id_c564eba6_fk_appusuarios_user_id` (`user_id`),
   CONSTRAINT `django_admin_log_content_type_id_c4bce8eb_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`),
   CONSTRAINT `django_admin_log_user_id_c564eba6_fk_appusuarios_user_id` FOREIGN KEY (`user_id`) REFERENCES `appusuarios_user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=75;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
@@ -720,7 +720,7 @@ CREATE TABLE `django_content_type` (
   `model` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `django_content_type_app_label_model_76bd3d3b_uniq` (`app_label`,`model`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -765,7 +765,7 @@ CREATE TABLE `django_migrations` (
   `name` varchar(255) NOT NULL,
   `applied` datetime(6) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=61;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -853,7 +853,7 @@ CREATE TABLE `django_session` (
   `expire_date` datetime(6) NOT NULL,
   PRIMARY KEY (`session_key`),
   KEY `django_session_expire_date_a5c62663` (`expire_date`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
