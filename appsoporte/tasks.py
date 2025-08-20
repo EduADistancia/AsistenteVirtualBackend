@@ -1,6 +1,7 @@
 import os
 
-from celery import shared_task
+# PAW no soporta Celery y Redis
+# from celery import shared_task
 from django.core.mail import EmailMultiAlternatives
 from django.core.mail.backends.smtp import EmailBackend
 from django.template.loader import render_to_string
@@ -24,9 +25,12 @@ def get_support_email():
         "from_email": f"{config.from_email} <{config.email}>",
     }
 
-@shared_task(bind=True, max_retries=3)
-def send_response_email(self, response_id):
-    try:
+# @shared_task(bind=True, max_retries=3)
+# PAW no soporta Celery y Redis
+# def send_response_email(self, response_id):
+def send_response_email(response_id):
+    # PAW no soporta Celery y Redis
+    # try:
         response = Response.objects.select_related("question__customer").get(id=response_id)
         created_at_local = timezone.localtime(response.question.created_at)
         recipient = response.question.override_email or response.question.customer.email
@@ -83,12 +87,13 @@ def send_response_email(self, response_id):
         response.save(update_fields=["sent_ok", "error_log"])
         return f"Correo enviado a {recipient}"
 
-    except Exception as exc:
-        try:
-            response = Response.objects.get(id=response_id)
-            response.sent_ok = False
-            response.error_log = str(exc)
-            response.save(update_fields=["sent_ok", "error_log"])
-        except:
-            pass
-        raise self.retry(exc=exc, countdown=60)
+    # PAW no soporta Celery y Redis
+    # except Exception as exc:
+    #     try:
+    #         response = Response.objects.get(id=response_id)
+    #         response.sent_ok = False
+    #         response.error_log = str(exc)
+    #         response.save(update_fields=["sent_ok", "error_log"])
+    #     except:
+    #         pass
+    #     raise self.retry(exc=exc, countdown=60)

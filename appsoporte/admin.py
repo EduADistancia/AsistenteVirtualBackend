@@ -91,7 +91,9 @@ class QuestionAdmin(admin.ModelAdmin):
                     obj.answered_by = request.user
                 obj.save()
                 # Ejecutar Celery para enviar correo
-                send_response_email.delay(obj.id)
+                # send_response_email.delay(obj.id)
+                # PAW No soporta Celery y Redis
+                send_response_email(obj.id)
                 
                 # Actualizar el status de la pregunta asociada
                 question = obj.question
