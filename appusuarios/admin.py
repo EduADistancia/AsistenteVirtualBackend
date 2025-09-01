@@ -1,7 +1,21 @@
+from django.urls import path
+from django.urls import reverse_lazy
 from django.contrib import admin
+from django.contrib.auth.views import PasswordChangeView
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext_lazy as _
+
 from .models import User
+
+
+class CustomPasswordChangeView(PasswordChangeView):
+    success_url = '/admin/'
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        self.request.user.must_change_password = False
+        self.request.user.save(update_fields=["must_change_password"])
+        return response
 
 
 @admin.register(User)
@@ -52,3 +66,19 @@ class UserAdmin(BaseUserAdmin):
         if request.user.is_superuser:
             return self.readonly_fields
         return self.readonly_fields + ('is_staff', 'is_superuser', 'groups', 'user_permissions')
+    
+    def get_urls(self):
+        urls = super().get_urls()
+        custom_urls = [
+            path(
+                'password_change/',
+                self.admin_site.admin_view(CustomPasswordChangeView.as_view()),
+                name='user_password_change',
+            ),
+        ]
+        return custom_urls + urls
+    
+    def password_change_view(self, request):
+        return PasswordChangeView.as_view(
+            success_url="/admin/",
+        )(request)

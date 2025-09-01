@@ -73,6 +73,9 @@ class QuestionAdmin(admin.ModelAdmin):
     list_filter = ("status", "created_at")
     search_fields = ("text", "customer__idMoodle", "customer__email")
     inlines = [ResponseInline]
+    
+    class Media:
+        js = ('appsoporte/admin_email.js',)
 
     def get_readonly_fields(self, request, obj=None):
         return [f.name for f in self.model._meta.fields]

@@ -14,10 +14,10 @@ import os
 from pathlib import Path
 
 ### sólo DEV ###
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 
-# dotenv_path = os.path.join("../", ".env")
-# load_dotenv(dotenv_path=dotenv_path, override=True)
+dotenv_path = os.path.join("../", ".env")
+load_dotenv(dotenv_path=dotenv_path, override=True)
 ### /sólo DEV ##
 
 
@@ -32,14 +32,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False #True
+DEBUG = True
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
 
 # Application definition
 
 INSTALLED_APPS = [
-     # admin-interface
+    # admin-interface
     "admin_interface",
     "colorfield",
     'django.contrib.admin',
@@ -71,6 +71,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Forzar cambio de contraseña en primer logueo al Admin
+    'appusuarios.middlewares.ForcePasswordChangeMiddleware',
 ]
 
 ROOT_URLCONF = 'asistvirtual.urls'
@@ -144,6 +146,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / "static",  # si tenés carpeta global de static
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
