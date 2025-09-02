@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const forms = document.querySelectorAll('form');
+    const forms = document.querySelectorAll('#question_form');
     forms.forEach(form => {
         form.addEventListener('submit', function () {
             let overlay = document.createElement('div');

@@ -12,8 +12,8 @@ class RolCostumer(models.Model):
         return self.rol
 
 class Costumer(models.Model):
-    idMoodle = models.CharField("Documento", max_length=12)
-    email = models.EmailField("Correo", max_length=254)
+    idMoodle = models.CharField("Documento", max_length=12, unique=True)
+    email = models.EmailField("Correo", max_length=254, null=True, blank=True)
     rol = models.ForeignKey(RolCostumer, on_delete=models.CASCADE)
     
     class Meta:
